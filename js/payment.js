@@ -32,7 +32,7 @@ function confirmEmail() {
     btn.textContent = '⏳ Создаю платёж...';
     btn.disabled = true;
 
-    fetch('api/create-payment.php', {
+    fetch('https://bitcoins-mining.net/cyber-security-api/api/create-payment.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
