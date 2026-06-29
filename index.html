@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security PRO — Защита WordPress</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <div class="logo">🛡️ Cyber Security PRO</div>
+            <h1>Максимальная защита WordPress</h1>
+            <p class="subtitle">Поведенческий анализ • Cloudflare Turnstile • 2FA • DDoS • Гео-блокировка • Защита контента</p>
+            
+            <!-- Тарифы -->
+            <div class="pricing">
+                <div class="plan">
+                    <div class="plan-name">PRO Месяц</div>
+                    <div class="plan-price">990₽<span>/мес</span></div>
+                    <ul>
+                        <li>✅ Все PRO-функции</li>
+                        <li>✅ Обновления 30 дней</li>
+                        <li>✅ Техподдержка</li>
+                        <li>✅ 1 сайт</li>
+                    </ul>
+                    <button onclick="buyPlan('monthly')" class="btn-buy">Купить</button>
+                </div>
+                
+                <div class="plan featured">
+                    <div class="plan-badge">🔥 Популярный</div>
+                    <div class="plan-name">PRO Год</div>
+                    <div class="plan-price">4 990₽<span>/год</span></div>
+                    <ul>
+                        <li>✅ Все PRO-функции</li>
+                        <li>✅ Обновления 1 год</li>
+                        <li>✅ Приоритетная поддержка</li>
+                        <li>✅ 3 сайта</li>
+                    </ul>
+                    <button onclick="buyPlan('yearly')" class="btn-buy">Купить</button>
+                </div>
+                
+                <div class="plan">
+                    <div class="plan-name">PRO Навсегда</div>
+                    <div class="plan-price">9 990₽</div>
+                    <ul>
+                        <li>✅ Все PRO-функции</li>
+                        <li>✅ Пожизненные обновления</li>
+                        <li>✅ VIP поддержка</li>
+                        <li>✅ 10 сайтов</li>
+                    </ul>
+                    <button onclick="buyPlan('lifetime')" class="btn-buy">Купить</button>
+                </div>
+            </div>
+            
+            <!-- Функции -->
+            <div class="features">
+                <h2>Что входит в PRO:</h2>
+                <div class="feature-grid">
+                    <div class="feature">🧠 Поведенческий анализ</div>
+                    <div class="feature">☁️ Cloudflare Turnstile</div>
+                    <div class="feature">🔐 2FA (двухфакторная)</div>
+                    <div class="feature">🛡️ DDoS защита</div>
+                    <div class="feature">🌍 Гео-блокировка</div>
+                    <div class="feature">📝 Защита контента</div>
+                    <div class="feature">🤖 AI Scraping защита</div>
+                    <div class="feature">📊 Мониторинг файлов</div>
+                    <div class="feature">💾 Облачные бэкапы</div>
+                    <div class="feature">🔍 Сканер вредоносного кода</div>
+                    <div class="feature">🚫 Расширенная защита SQL</div>
+                    <div class="feature">📧 Еженедельные отчёты</div>
+                </div>
+            </div>
+            
+            <!-- Как активировать -->
+            <div class="how-it-works">
+                <h2>Как активировать PRO:</h2>
+                <div class="steps">
+                    <div class="step">1️⃣ Оплатите тариф</div>
+                    <div class="step">2️⃣ Получите ключ на email</div>
+                    <div class="step">3️⃣ Вставьте ключ в плагине</div>
+                    <div class="step">4️⃣ PRO функции активированы!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Модальное окно для email -->
+    <div id="email-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h2>Введите email для получения ключа</h2>
+            <input type="email" id="email-input" placeholder="your@email.com" required>
+            <p id="email-error" style="color:#ff4040;display:none;">Введите корректный email</p>
+            <button onclick="confirmEmail()" class="btn-buy">Продолжить</button>
+            <button onclick="closeModal()" class="btn-cancel">Отмена</button>
+        </div>
+    </div>
+    
+    <script src="js/payment.js"></script>
+</body>
+</html>
