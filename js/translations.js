@@ -169,6 +169,7 @@ plan_price_period_monthly: '/мес',
 plan_price_yearly: '4 990₽',
 plan_price_period_yearly: '/год',
 plan_price_lifetime: '14 990₽',
+        footer_contact_page: 'Контакты',
     },
 
     en: {
@@ -338,6 +339,7 @@ plan_price_period_monthly: '/mo',
 plan_price_yearly: '$50',
 plan_price_period_yearly: '/yr',
 plan_price_lifetime: '$150',
+        footer_contact_page: 'Contact',
     },
 
     de: {
@@ -507,6 +509,7 @@ plan_price_period_monthly: '/Monat',
 plan_price_yearly: '50€',
 plan_price_period_yearly: '/Jahr',
 plan_price_lifetime: '150€',
+        footer_contact_page: 'Kontakt',
     },
 
     fr: {
@@ -676,6 +679,7 @@ plan_price_period_monthly: '/mois',
 plan_price_yearly: '50€',
 plan_price_period_yearly: '/an',
 plan_price_lifetime: '150€',
+        footer_contact_page: 'Contact',
     },
 
     it: {
@@ -845,6 +849,7 @@ plan_price_period_monthly: '/mese',
 plan_price_yearly: '50€',
 plan_price_period_yearly: '/anno',
 plan_price_lifetime: '150€',
+        footer_contact_page: 'Contatti',
     },
 
     es: {
@@ -1014,6 +1019,7 @@ plan_price_period_monthly: '/mes',
 plan_price_yearly: '50€',
 plan_price_period_yearly: '/año',
 plan_price_lifetime: '150€',
+        footer_contact_page: 'Contacto',
     },
 
     pt: {
@@ -1183,6 +1189,7 @@ plan_price_period_monthly: '/mês',
 plan_price_yearly: 'R$250',
 plan_price_period_yearly: '/ano',
 plan_price_lifetime: 'R$750',
+        footer_contact_page: 'Contato',
     },
 
     zh: {
@@ -1352,6 +1359,7 @@ plan_price_period_monthly: '/月',
 plan_price_yearly: '¥350',
 plan_price_period_yearly: '/年',
 plan_price_lifetime: '¥1,050',
+        footer_contact_page: '联系我们',
     },
 
     ja: {
@@ -1521,6 +1529,7 @@ plan_price_period_monthly: '/月',
 plan_price_yearly: '¥7,500',
 plan_price_period_yearly: '/年',
 plan_price_lifetime: '¥22,500',
+        footer_contact_page: 'お問い合わせ',
     },
 
     ko: {
@@ -1690,6 +1699,7 @@ plan_price_period_monthly: '/월',
 plan_price_yearly: '₩70,000',
 plan_price_period_yearly: '/년',
 plan_price_lifetime: '₩210,000',
+        footer_contact_page: '문의하기',
     }
 };
 
