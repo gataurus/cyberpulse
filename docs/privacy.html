@@ -3,61 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Политика конфиденциальности | Cyber Security PRO</title>
+    <title data-i18n="privacy_title">Политика обработки персональных данных | Cyber Security PRO</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/translations.js"></script>
     <style>
         .doc-page { max-width: 800px; margin: 60px auto; padding: 40px; }
         .doc-page h1 { color: var(--green); margin-bottom: 30px; font-size: 2rem; }
         .doc-page h2 { color: #fff; margin: 30px 0 15px; font-size: 1.3rem; }
-        .doc-page p, .doc-page li { color: var(--text-secondary); margin-bottom: 12px; font-size: 0.95rem; line-height: 1.7; }
+        .doc-page p, .doc-page li, .doc-page ol { color: var(--text-secondary); margin-bottom: 12px; font-size: 0.95rem; line-height: 1.7; }
         .doc-page a { color: var(--green); }
-        .back-link { display: inline-block; margin-top: 40px; color: var(--green); }
+        .back-link { display: inline-block; margin-top: 40px; color: var(--green); text-decoration: none; font-weight: 600; }
+        .back-link:hover { text-decoration: underline; }
+        .lang-switcher { position: fixed; top: 16px; right: 16px; z-index: 100; font-size: 0.8rem; }
+        .lang-current { display: flex; align-items: center; gap: 8px; background: var(--bg-card); border: 1px solid var(--border); padding: 8px 14px; border-radius: var(--radius-sm); cursor: pointer; color: var(--text); font-weight: 600; white-space: nowrap; transition: all 0.2s; user-select: none; }
+        .lang-current:hover { border-color: var(--green); }
+        .lang-current.open { border-color: var(--green); box-shadow: 0 0 12px var(--green-glow); }
+        .lang-current span { font-size: 0.85rem; }
+        .lang-arrow { transition: transform 0.2s; color: var(--text-secondary); }
+        .lang-current.open .lang-arrow { transform: rotate(180deg); }
+        .lang-dropdown { position: absolute; top: calc(100% + 4px); right: 0; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); min-width: 180px; max-height: 320px; overflow-y: auto; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); animation: fadeIn 0.15s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+        .lang-option { display: flex; align-items: center; gap: 10px; padding: 10px 16px; cursor: pointer; color: var(--text-secondary); font-size: 0.85rem; transition: all 0.15s; }
+        .lang-option:hover { background: rgba(0, 224, 72, 0.05); color: var(--text); }
+        .lang-option.active { color: var(--green); font-weight: 700; background: rgba(0, 224, 72, 0.08); }
     </style>
 </head>
 <body>
-    <div class="doc-page">
-        <h1>Политика обработки персональных данных</h1>
-        
-        <h2>1. Общие положения</h2>
-        <p>Настоящая Политика определяет порядок обработки и защиты персональных данных пользователей, приобретающих лицензию на программное обеспечение Cyber Security PRO.</p>
-        <p>Мы серьёзно относимся к конфиденциальности ваших данных и принимаем все необходимые меры для их защиты.</p>
-        
-        <h2>2. Какие данные обрабатываются</h2>
-        <p>При приобретении лицензии мы получаем от платёжной системы следующие данные:</p>
-        <ul>
-            <li>Адрес электронной почты, указанный при оформлении платежа</li>
-            <li>Информацию о факте и сумме платежа</li>
-            <li>Идентификатор транзакции в платёжной системе</li>
-        </ul>
-        <p>Мы <strong>не</strong> собираем, не храним и не обрабатываем: пароли, данные банковских карт, CVV/CVC-коды, платёжные токены. Обработка платёжной информации осуществляется исключительно платёжными системами, соответствующими стандарту PCI DSS.</p>
-        
-        <h2>3. Цели обработки данных</h2>
-        <ul>
-            <li>Предоставление лицензионного ключа после успешной оплаты</li>
-            <li>Верификация лицензии при активации и последующих проверках</li>
-            <li>Исполнение обязательств по публичной оферте</li>
-        </ul>
-        <p>Данные не используются в маркетинговых, рекламных или иных целях, не связанных с предоставлением лицензии.</p>
-        
-        <h2>4. Передача данных третьим лицам</h2>
-        <p>Мы не передаём персональные данные третьим лицам, за исключением случаев, предусмотренных законодательством.</p>
-        
-        <h2>5. Хранение данных</h2>
-        <p>Персональные данные хранятся в течение срока действия лицензии, а также в течение срока, установленного применимым законодательством для бухгалтерской и налоговой отчётности.</p>
-        
-        <h2>6. Права субъекта данных</h2>
-        <p>Вы имеете право:</p>
-        <ul>
-            <li>Запросить информацию о хранящихся данных</li>
-            <li>Потребовать удаления ваших данных</li>
-            <li>Отозвать согласие на обработку данных</li>
-        </ul>
-        <p>Для реализации ваших прав направьте запрос на <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a>. Запрос будет обработан в течение 30 календарных дней.</p>
-        
-        <h2>7. Контакты</h2>
-        <p>По всем вопросам, связанным с обработкой персональных данных, обращайтесь: <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a></p>
-        
-        <a href="../index.html" class="back-link">← На главную</a>
-    </div>
+
+<div id="lang-switcher" class="lang-switcher"></div>
+
+<div class="doc-page">
+    <h1 data-i18n="privacy_title">Политика обработки персональных данных</h1>
+    
+    <h2 data-i18n="privacy_s1_title">1. Общие положения</h2>
+    <p data-i18n="privacy_s1_p1">Настоящая Политика определяет порядок обработки и защиты персональных данных пользователей, приобретающих лицензию на программное обеспечение Cyber Security PRO.</p>
+    <p data-i18n="privacy_s1_p2">Мы серьёзно относимся к конфиденциальности ваших данных и принимаем все необходимые меры для их защиты.</p>
+    
+    <h2 data-i18n="privacy_s2_title">2. Какие данные обрабатываются</h2>
+    <p data-i18n="privacy_s2_p1">При приобретении лицензии мы получаем от платёжной системы следующие данные:</p>
+    <ul>
+        <li data-i18n="privacy_s2_li1">Адрес электронной почты, указанный при оформлении платежа</li>
+        <li data-i18n="privacy_s2_li2">Информацию о факте и сумме платежа</li>
+        <li data-i18n="privacy_s2_li3">Идентификатор транзакции в платёжной системе</li>
+    </ul>
+    <p data-i18n-html="privacy_s2_p2">Мы <strong>не</strong> собираем, не храним и не обрабатываем: пароли, данные банковских карт, CVV/CVC-коды, платёжные токены. Обработка платёжной информации осуществляется исключительно платёжными системами, соответствующими стандарту PCI DSS.</p>
+    
+    <h2 data-i18n="privacy_s3_title">3. Цели обработки данных</h2>
+    <ul>
+        <li data-i18n="privacy_s3_li1">Предоставление лицензионного ключа после успешной оплаты</li>
+        <li data-i18n="privacy_s3_li2">Верификация лицензии при активации и последующих проверках</li>
+        <li data-i18n="privacy_s3_li3">Исполнение обязательств по публичной оферте</li>
+    </ul>
+    <p data-i18n="privacy_s3_p1">Данные не используются в маркетинговых, рекламных или иных целях, не связанных с предоставлением лицензии.</p>
+    
+    <h2 data-i18n="privacy_s4_title">4. Передача данных третьим лицам</h2>
+    <p data-i18n="privacy_s4_p1">Мы не передаём персональные данные третьим лицам, за исключением случаев, предусмотренных законодательством.</p>
+    
+    <h2 data-i18n="privacy_s5_title">5. Хранение данных</h2>
+    <p data-i18n="privacy_s5_p1">Персональные данные хранятся в течение срока действия лицензии, а также в течение срока, установленного применимым законодательством для бухгалтерской и налоговой отчётности.</p>
+    
+    <h2 data-i18n="privacy_s6_title">6. Права субъекта данных</h2>
+    <p data-i18n="privacy_s6_p1">Вы имеете право:</p>
+    <ul>
+        <li data-i18n="privacy_s6_li1">Запросить информацию о хранящихся данных</li>
+        <li data-i18n="privacy_s6_li2">Потребовать удаления ваших данных</li>
+        <li data-i18n="privacy_s6_li3">Отозвать согласие на обработку данных</li>
+    </ul>
+    <p data-i18n-html="privacy_s6_p2">Для реализации ваших прав направьте запрос на <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a>. Запрос будет обработан в течение 30 календарных дней.</p>
+    
+    <h2 data-i18n="privacy_s7_title">7. Контакты</h2>
+    <p data-i18n-html="privacy_s7_p1">По всем вопросам: <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a></p>
+    
+    <a href="../index.html" class="back-link" data-i18n="back_home">← На главную</a>
+</div>
+
+<script>
+const I18n = {
+    current: 'ru',
+    languages: {
+        ru: { name: 'Русский', flag: '🇷🇺' },
+        en: { name: 'English', flag: '🇬🇧' },
+        de: { name: 'Deutsch', flag: '🇩🇪' },
+        fr: { name: 'Français', flag: '🇫🇷' },
+        it: { name: 'Italiano', flag: '🇮🇹' },
+        es: { name: 'Español', flag: '🇪🇸' },
+        pt: { name: 'Português', flag: '🇧🇷' },
+        zh: { name: '中文', flag: '🇨🇳' },
+        ja: { name: '日本語', flag: '🇯🇵' },
+        ko: { name: '한국어', flag: '🇰🇷' }
+    },
+    init: function() {
+        let lang = this.getSavedLanguage() || this.getBrowserLanguage();
+        if (!this.languages[lang]) lang = 'en';
+        this.setLanguage(lang);
+        this.renderSwitcher();
+    },
+    getSavedLanguage: function() { return localStorage.getItem('cs_lang'); },
+    getBrowserLanguage: function() {
+        const lang = navigator.language || navigator.userLanguage || 'en';
+        return lang.split('-')[0];
+    },
+    setLanguage: function(lang) {
+        this.current = lang;
+        localStorage.setItem('cs_lang', lang);
+        document.documentElement.lang = lang;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (DocTranslations[lang] && DocTranslations[lang][key]) {
+                el.textContent = DocTranslations[lang][key];
+            }
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+            const key = el.getAttribute('data-i18n-html');
+            if (DocTranslations[lang] && DocTranslations[lang][key]) {
+                el.innerHTML = DocTranslations[lang][key];
+            }
+        });
+        document.querySelectorAll('.lang-option').forEach(opt => {
+            opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+        });
+        const currentBtn = document.querySelector('.lang-current span');
+        if (currentBtn && this.languages[lang]) {
+            currentBtn.textContent = this.languages[lang].flag + ' ' + this.languages[lang].name;
+        }
+    },
+    renderSwitcher: function() {
+        const container = document.getElementById('lang-switcher');
+        if (!container) return;
+        const current = this.languages[this.current] || this.languages['en'];
+        let html = '<div class="lang-current" onclick="I18n.toggleSwitcher()">';
+        html += '<span>' + current.flag + ' ' + current.name + '</span>';
+        html += '<svg class="lang-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>';
+        html += '</div><div class="lang-dropdown" id="lang-dropdown" style="display:none;">';
+        for (let code in this.languages) {
+            const lang = this.languages[code];
+            const active = code === this.current ? ' active' : '';
+            html += '<div class="lang-option' + active + '" data-lang="' + code + '" onclick="I18n.setLanguage(\'' + code + '\')">';
+            html += '<span class="lang-flag">' + lang.flag + '</span><span class="lang-name">' + lang.name + '</span></div>';
+        }
+        html += '</div>';
+        container.innerHTML = html;
+    },
+    toggleSwitcher: function() {
+        const dropdown = document.getElementById('lang-dropdown');
+        if (dropdown) {
+            const isOpen = dropdown.style.display === 'block';
+            dropdown.style.display = isOpen ? 'none' : 'block';
+            document.querySelector('.lang-current').classList.toggle('open', !isOpen);
+        }
+    }
+};
+
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('#lang-switcher')) {
+        const dropdown = document.getElementById('lang-dropdown');
+        if (dropdown) dropdown.style.display = 'none';
+        document.querySelector('.lang-current')?.classList.remove('open');
+    }
+});
+
+const DocTranslations = {
+    ru: {
+        privacy_title: 'Политика обработки персональных данных | Cyber Security PRO',
+        privacy_s1_title: '1. Общие положения',
+        privacy_s1_p1: 'Настоящая Политика определяет порядок обработки и защиты персональных данных пользователей, приобретающих лицензию на программное обеспечение Cyber Security PRO.',
+        privacy_s1_p2: 'Мы серьёзно относимся к конфиденциальности ваших данных и принимаем все необходимые меры для их защиты.',
+        privacy_s2_title: '2. Какие данные обрабатываются',
+        privacy_s2_p1: 'При приобретении лицензии мы получаем от платёжной системы следующие данные:',
+        privacy_s2_li1: 'Адрес электронной почты, указанный при оформлении платежа',
+        privacy_s2_li2: 'Информацию о факте и сумме платежа',
+        privacy_s2_li3: 'Идентификатор транзакции в платёжной системе',
+        privacy_s2_p2: 'Мы <strong>не</strong> собираем, не храним и не обрабатываем: пароли, данные банковских карт, CVV/CVC-коды, платёжные токены. Обработка платёжной информации осуществляется исключительно платёжными системами.',
+        privacy_s3_title: '3. Цели обработки данных',
+        privacy_s3_li1: 'Предоставление лицензионного ключа после успешной оплаты',
+        privacy_s3_li2: 'Верификация лицензии при активации и последующих проверках',
+        privacy_s3_li3: 'Исполнение обязательств по публичной оферте',
+        privacy_s3_p1: 'Данные не используются в маркетинговых, рекламных или иных целях.',
+        privacy_s4_title: '4. Передача данных третьим лицам',
+        privacy_s4_p1: 'Мы не передаём персональные данные третьим лицам, за исключением случаев, предусмотренных законодательством.',
+        privacy_s5_title: '5. Хранение данных',
+        privacy_s5_p1: 'Персональные данные хранятся в течение срока действия лицензии и в течение срока для отчётности.',
+        privacy_s6_title: '6. Права субъекта данных',
+        privacy_s6_p1: 'Вы имеете право:',
+        privacy_s6_li1: 'Запросить информацию о хранящихся данных',
+        privacy_s6_li2: 'Потребовать удаления ваших данных',
+        privacy_s6_li3: 'Отозвать согласие на обработку данных',
+        privacy_s6_p2: 'Для реализации ваших прав направьте запрос на <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a>.',
+        privacy_s7_title: '7. Контакты',
+        privacy_s7_p1: 'По всем вопросам: <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a>',
+        back_home: '← На главную'
+    },
+    en: {
+        privacy_title: 'Privacy Policy | Cyber Security PRO',
+        privacy_s1_title: '1. General Provisions',
+        privacy_s1_p1: 'This Policy defines the procedure for processing and protecting personal data of users purchasing a Cyber Security PRO license.',
+        privacy_s1_p2: 'We take your data confidentiality seriously and take all necessary measures to protect it.',
+        privacy_s2_title: '2. What Data is Processed',
+        privacy_s2_p1: 'When purchasing a license, we receive the following data from the payment system:',
+        privacy_s2_li1: 'Email address provided during payment',
+        privacy_s2_li2: 'Payment fact and amount information',
+        privacy_s2_li3: 'Transaction ID in the payment system',
+        privacy_s2_p2: 'We <strong>do not</strong> collect, store or process: passwords, bank card data, CVV/CVC codes, payment tokens.',
+        privacy_s3_title: '3. Purposes of Data Processing',
+        privacy_s3_li1: 'Providing a license key after successful payment',
+        privacy_s3_li2: 'License verification during activation and subsequent checks',
+        privacy_s3_li3: 'Fulfillment of obligations under the public offer',
+        privacy_s3_p1: 'Data is not used for marketing, advertising or other purposes.',
+        privacy_s4_title: '4. Transfer to Third Parties',
+        privacy_s4_p1: 'We do not transfer personal data to third parties except as required by law.',
+        privacy_s5_title: '5. Data Storage',
+        privacy_s5_p1: 'Personal data is stored during the license validity period and for the reporting period.',
+        privacy_s6_title: '6. Data Subject Rights',
+        privacy_s6_p1: 'You have the right to:',
+        privacy_s6_li1: 'Request information about stored data',
+        privacy_s6_li2: 'Request deletion of your data',
+        privacy_s6_li3: 'Withdraw consent to data processing',
+        privacy_s6_p2: 'Send a request to <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a>.',
+        privacy_s7_title: '7. Contacts',
+        privacy_s7_p1: 'For all questions: <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a>',
+        back_home: '← Back to Home'
+    },
+    de: {
+        privacy_title: 'Datenschutzerklärung | Cyber Security PRO',
+        privacy_s1_title: '1. Allgemeine Bestimmungen',
+        privacy_s1_p1: 'Diese Richtlinie definiert das Verfahren zur Verarbeitung und zum Schutz personenbezogener Daten von Nutzern, die eine Cyber Security PRO Lizenz erwerben.',
+        privacy_s1_p2: 'Wir nehmen den Schutz Ihrer Daten ernst und ergreifen alle notwendigen Maßnahmen.',
+        privacy_s2_title: '2. Welche Daten verarbeitet werden',
+        privacy_s2_p1: 'Beim Lizenzerwerb erhalten wir folgende Daten vom Zahlungssystem:',
+        privacy_s2_li1: 'E-Mail-Adresse bei der Zahlung',
+        privacy_s2_li2: 'Informationen zu Zahlung und Betrag',
+        privacy_s2_li3: 'Transaktions-ID im Zahlungssystem',
+        privacy_s2_p2: 'Wir <strong>erfassen, speichern oder verarbeiten keine</strong> Passwörter, Bankkartendaten, CVV/CVC-Codes.',
+        privacy_s3_title: '3. Zwecke der Datenverarbeitung',
+        privacy_s3_li1: 'Bereitstellung des Lizenzschlüssels nach erfolgreicher Zahlung',
+        privacy_s3_li2: 'Lizenzverifizierung bei Aktivierung',
+        privacy_s3_li3: 'Erfüllung der Verpflichtungen aus dem öffentlichen Angebot',
+        privacy_s3_p1: 'Daten werden nicht für Marketing oder Werbung verwendet.',
+        privacy_s4_title: '4. Weitergabe an Dritte',
+        privacy_s4_p1: 'Wir geben keine personenbezogenen Daten an Dritte weiter, außer wenn gesetzlich vorgeschrieben.',
+        privacy_s5_title: '5. Datenspeicherung',
+        privacy_s5_p1: 'Personenbezogene Daten werden während der Lizenzlaufzeit gespeichert.',
+        privacy_s6_title: '6. Rechte der betroffenen Person',
+        privacy_s6_p1: 'Sie haben das Recht:',
+        privacy_s6_li1: 'Auskunft über gespeicherte Daten zu verlangen',
+        privacy_s6_li2: 'Löschung Ihrer Daten zu verlangen',
+        privacy_s6_li3: 'Einwilligung zur Datenverarbeitung zu widerrufen',
+        privacy_s6_p2: 'Senden Sie eine Anfrage an <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a>.',
+        privacy_s7_title: '7. Kontakte',
+        privacy_s7_p1: 'Bei Fragen: <a href="mailto:cybersecurity.plugin@gmail.com">cybersecurity.plugin@gmail.com</a>',
+        back_home: '← Zur Startseite'
+    }
+};
+
+// Fallback to English
+for (let lang in DocTranslations) {
+    if (lang === 'en') continue;
+    for (let key in DocTranslations.en) {
+        if (!DocTranslations[lang][key]) {
+            DocTranslations[lang][key] = DocTranslations.en[key];
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() { I18n.init(); });
+</script>
 </body>
 </html>
