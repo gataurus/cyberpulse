@@ -333,88 +333,17 @@ body {
 /* ============================================ */
 @media (max-width: 1000px) {
     .threats-grid { grid-template-columns: repeat(2, 1fr); }
-    .capabilities-grid { grid-template-columns: repeat(2, 1fr); }
     .why-us-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
     .threats-grid, .pro-features-grid, .pricing, .steps { grid-template-columns: 1fr; }
-    .capabilities-grid, .for-whom-grid, .why-us-grid { grid-template-columns: 1fr; }
+    .why-us-grid { grid-template-columns: 1fr; }
     .hero-title { font-size: 2rem; }
     .hero-brand { font-size: 1.5rem; }
     .hero-shield { font-size: 2.5rem; }
     .hero-stats { gap: 30px; }
     .section-title { font-size: 1.6rem; }
-}
-
-/* ============================================ */
-/* CAPABILITIES */
-/* ============================================ */
-.capabilities {
-    padding: 80px 0;
-    background: rgba(255, 255, 255, 0.01);
-}
-
-.capabilities-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-}
-
-.capability-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 22px 18px;
-    font-size: 0.88rem;
-    color: var(--text);
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    line-height: 1.5;
-    font-weight: 500;
-}
-
-.capability-card:hover {
-    border-color: var(--green);
-    box-shadow: 0 0 20px var(--green-glow);
-    transform: translateY(-2px);
-    color: var(--green);
-}
-
-/* ============================================ */
-/* FOR WHOM */
-/* ============================================ */
-.for-whom {
-    padding: 80px 0;
-}
-
-.for-whom-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-}
-
-.for-whom-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px 20px;
-    font-size: 0.95rem;
-    color: var(--text);
-    text-align: center;
-    transition: all 0.25s;
-    font-weight: 600;
-    cursor: default;
-}
-
-.for-whom-card:hover {
-    border-color: var(--green);
-    box-shadow: 0 0 25px var(--green-glow);
-    transform: translateY(-3px);
-    color: var(--green);
-    background: rgba(0, 224, 72, 0.03);
 }
 
 /* ============================================ */
