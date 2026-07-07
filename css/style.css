@@ -358,27 +358,29 @@ body {
 .capabilities-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 14px;
 }
 
 .capability-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 20px;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+    padding: 22px 18px;
+    font-size: 0.88rem;
+    color: var(--text);
     transition: all 0.2s;
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    gap: 12px;
     line-height: 1.5;
+    font-weight: 500;
 }
 
 .capability-card:hover {
     border-color: var(--green);
-    box-shadow: 0 0 15px var(--green-glow);
-    transform: translateY(-1px);
+    box-shadow: 0 0 20px var(--green-glow);
+    transform: translateY(-2px);
+    color: var(--green);
 }
 
 /* ============================================ */
@@ -398,19 +400,21 @@ body {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    padding: 24px 20px;
+    padding: 28px 20px;
     font-size: 0.95rem;
     color: var(--text);
     text-align: center;
-    transition: all 0.2s;
+    transition: all 0.25s;
     font-weight: 600;
+    cursor: default;
 }
 
 .for-whom-card:hover {
     border-color: var(--green);
-    box-shadow: 0 0 20px var(--green-glow);
-    transform: translateY(-2px);
+    box-shadow: 0 0 25px var(--green-glow);
+    transform: translateY(-3px);
     color: var(--green);
+    background: rgba(0, 224, 72, 0.03);
 }
 
 /* ============================================ */
