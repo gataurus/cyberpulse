@@ -1,5 +1,5 @@
 /**
- * Translations for all 10 languages — Complete Version (v5.7.6)
+ * Translations for all 10 languages — Complete Version
  */
 const Translations = {
     ru: {
