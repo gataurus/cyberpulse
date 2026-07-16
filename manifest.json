@@ -1,8 +1,8 @@
 {
-    "name": "CyberPulse",
-    "short_name": "CyberPulse",
+    "name": "CyberPulse Security",
+    "short_name": "CyberPulse Sec",
     "description": "Комплексная защита WordPress от ботов и атак",
-    "start_url": "/cyberpulse/",
+    "start_url": "/cyberpulse-security/",
     "display": "browser",
     "background_color": "#0f1117",
     "theme_color": "#00e048",
