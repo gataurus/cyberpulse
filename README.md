@@ -2,10 +2,10 @@
 
 **Advanced WordPress protection against bots, vulnerability scanners, brute force attacks, and AI scraping. Multi-layer verification with 20+ detection methods, 10 languages, and real-time dashboard.**
 
-[![Version](https://img.shields.io/badge/version-5.8.1-blue.svg)](https://github.com/gataurus/cyberpulse)
+[![Version](https://img.shields.io/badge/version-5.8.6-blue.svg)](https://github.com/gataurus/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
-[![WordPress](https://img.shields.io/badge/WordPress-5.0+-blue.svg)](https://wordpress.org)
+[![WordPress](https://img.shields.io/badge/WordPress-5.3+-blue.svg)](https://wordpress.org)
 [![Languages](https://img.shields.io/badge/languages-10-orange.svg)](#-translations)
 
 **Author:** [gataurus](https://github.com/gataurus)  
@@ -22,7 +22,6 @@
 | WordPress System Hiding | ✅ | ✅ |
 | Rate Limiting | ✅ | ✅ |
 | IP Whitelist | ✅ | ✅ |
-| Local Database Backups | ✅ | ✅ |
 | Email Attack Alerts | ✅ | ✅ |
 | AI Scraping Protection | ✅ | ✅ |
 | XSS & Hidden Files Protection | ✅ | ✅ |
@@ -32,19 +31,24 @@
 | User-Agent Blacklist | ✅ | ✅ |
 | Event Log (Audit) | ✅ | ✅ |
 | Secure Cookies | ✅ | ✅ |
+| Auto Log Cleanup | ✅ | ✅ |
+| Dashboard Widget | ✅ | ✅ |
+| Security Test (17 tests) | ✅ | ✅ |
 | Behavioral Analysis | ❌ | ✅ |
 | Cloudflare Turnstile | ❌ | ✅ |
 | 2FA Authentication | ❌ | ✅ |
-| DDoS Protection | ❌ | ✅ |
+| DDoS Protection + Anti-Slowloris | ❌ | ✅ |
 | Geo-Blocking (195 countries) | ❌ | ✅ |
 | Content Copy Protection | ❌ | ✅ |
 | File Integrity Monitoring | ❌ | ✅ |
-| Cloud Backups (Google Drive, Yandex, Dropbox) | ❌ | ✅ |
 | Malware Scanner | ❌ | ✅ |
+| SQL Injection Protection | ❌ | ✅ |
+| Antispam (Comments + Registrations) | ❌ | ✅ |
+| Upload Protection | ❌ | ✅ |
+| File System Protection | ❌ | ✅ |
 | Threat Intelligence | ❌ | ✅ |
 | Weekly Security Report | ❌ | ✅ |
 | REST API Rate Limiting | ❌ | ✅ |
-| Backup Encryption (AES-256) | ❌ | ✅ |
 | Content Security Policy (CSP) | ❌ | ✅ |
 | Force HTTPS | ❌ | ✅ |
 
@@ -87,7 +91,7 @@ The plugin is pre-configured for optimal protection:
 
 ## 🔧 Requirements
 
-- WordPress 5.0+
+- WordPress 5.3+
 - PHP 7.4+
 - Write permissions to `/wp-content/uploads/`
 
