@@ -191,6 +191,7 @@ const Translations = {
 'pro10_desc': 'Мониторинг критических файлов WordPress каждые 6 часов. Уведомления при изменениях на email администратора. История изменений в админке.',
 'faq3_a': 'PRO-функции отключатся, но <strong>базовая защита продолжит работать</strong>. Ваш сайт не останется без защиты. Все ваши настройки, белый список IP и логи сохранятся. Вы можете продлить лицензию в любой момент — все PRO-функции снова активируются без потери данных.',
 'faq7_a': 'При удалении через админку WordPress плагин автоматически очищает все свои данные: логи, настройки, списки блокировок. Никаких следов не остаётся.',
+    'footer_plugin': 'Плагин:',
     },
 
     en: {
@@ -382,6 +383,7 @@ const Translations = {
 'pro10_desc': 'Critical WordPress file monitoring every 6 hours. Email notifications on changes. Change history in admin panel.',
 'faq3_a': 'PRO features will be disabled, but <strong>basic protection continues to work</strong>. Your site will not be left unprotected. All your settings, IP whitelist and logs are preserved. You can renew your license at any time — all PRO features will reactivate without data loss.',
 'faq7_a': 'When deleted through WordPress admin, the plugin automatically cleans all its data: logs, settings, block lists. No traces remain.',
+    'footer_plugin': 'Plugin:',
     },
 
     de: {
@@ -573,6 +575,7 @@ const Translations = {
 'pro10_desc': 'Überwachung kritischer WordPress-Dateien alle 6 Stunden. E-Mail-Benachrichtigungen bei Änderungen. Änderungshistorie im Admin-Panel.',
 'faq3_a': 'PRO-Funktionen werden deaktiviert, aber <strong>der Basisschutz funktioniert weiter</strong>. Ihre Website bleibt nicht ungeschützt. Alle Einstellungen, IP-Whitelist und Protokolle bleiben erhalten. Sie können Ihre Lizenz jederzeit verlängern — alle PRO-Funktionen werden ohne Datenverlust reaktiviert.',
 'faq7_a': 'Bei der Löschung über die WordPress-Administration bereinigt das Plugin automatisch alle seine Daten: Protokolle, Einstellungen, Sperrlisten. Es bleiben keine Spuren zurück.',
+    'footer_plugin': 'Plugin:',
     },
 
     fr: {
@@ -764,6 +767,7 @@ const Translations = {
 'pro10_desc': 'Surveillance des fichiers WordPress critiques toutes les 6 heures. Notifications par e-mail en cas de modifications. Historique des modifications dans le panneau d\'administration.',
 'faq3_a': 'Les fonctions PRO seront désactivées, mais <strong>la protection de base continue de fonctionner</strong>. Votre site ne sera pas laissé sans protection. Tous vos paramètres, liste blanche IP et journaux sont conservés. Vous pouvez renouveler votre licence à tout moment — toutes les fonctions PRO se réactiveront sans perte de données.',
 'faq7_a': 'Lors de la suppression via l\'administration WordPress, le plugin nettoie automatiquement toutes ses données : journaux, paramètres, listes de blocage. Aucune trace ne reste.',
+    'footer_plugin': 'Plugin :',
     },
 
     it: {
@@ -955,6 +959,7 @@ const Translations = {
 'pro10_desc': 'Monitoraggio dei file critici di WordPress ogni 6 ore. Notifiche email in caso di modifiche. Cronologia delle modifiche nel pannello di amministrazione.',
 'faq3_a': 'Le funzioni PRO saranno disattivate, ma <strong>la protezione di base continua a funzionare</strong>. Il tuo sito non rimarrà senza protezione. Tutte le impostazioni, la whitelist IP e i registri vengono conservati. Puoi rinnovare la licenza in qualsiasi momento — tutte le funzioni PRO si riattiveranno senza perdita di dati.',
 'faq7_a': 'Quando viene eliminato tramite l\'amministrazione di WordPress, il plugin pulisce automaticamente tutti i suoi dati: registri, impostazioni, liste di blocco. Non rimane alcuna traccia.',
+    'footer_plugin': 'Plugin:',
     },
 
     es: {
@@ -1146,6 +1151,7 @@ const Translations = {
 'pro10_desc': 'Monitoreo de archivos críticos de WordPress cada 6 horas. Notificaciones por correo electrónico sobre cambios. Historial de cambios en el panel de administración.',
 'faq3_a': 'Las funciones PRO se desactivarán, pero <strong>la protección básica sigue funcionando</strong>. Su sitio no quedará desprotegido. Todas sus configuraciones, lista blanca de IP y registros se conservan. Puede renovar su licencia en cualquier momento — todas las funciones PRO se reactivarán sin pérdida de datos.',
 'faq7_a': 'Al eliminarlo a través de la administración de WordPress, el plugin limpia automáticamente todos sus datos: registros, configuraciones, listas de bloqueo. No queda ningún rastro.',
+    'footer_plugin': 'Plugin:',
     },
 
     pt: {
@@ -1337,6 +1343,7 @@ const Translations = {
 'pro10_desc': 'Monitoramento de arquivos críticos do WordPress a cada 6 horas. Notificações por e-mail sobre alterações. Histórico de alterações no painel de administração.',
 'faq3_a': 'As funções PRO serão desativadas, mas <strong>a proteção básica continua funcionando</strong>. Seu site não ficará desprotegido. Todas as configurações, lista branca de IP e registros são preservados. Você pode renovar sua licença a qualquer momento — todas as funções PRO serão reativadas sem perda de dados.',
 'faq7_a': 'Ao ser excluído através da administração do WordPress, o plugin limpa automaticamente todos os seus dados: registros, configurações, listas de bloqueio. Nenhum vestígio permanece.',
+    'footer_plugin': 'Plugin:',
     },
 
     zh: {
@@ -1528,6 +1535,7 @@ const Translations = {
 'pro10_desc': '每6小时监控关键 WordPress 文件。更改时发送邮件通知。管理面板中的更改历史记录。',
 'faq3_a': 'PRO 功能将被禁用，但<strong>基本保护继续工作</strong>。您的网站不会失去保护。所有设置、IP 白名单和日志都会保留。您可以随时续订许可证 — 所有 PRO 功能将重新激活而不会丢失数据。',
 'faq7_a': '通过 WordPress 管理删除时，插件会自动清理所有数据：日志、设置、阻止列表。不留下任何痕迹。',
+    'footer_plugin': '插件：',
     },
 
     ja: {
@@ -1719,6 +1727,7 @@ const Translations = {
 'pro10_desc': '6時間ごとの重要なWordPressファイルの監視。変更時のメール通知。管理パネルでの変更履歴。',
 'faq3_a': 'PRO機能は無効になりますが、<strong>基本保護は引き続き機能します</strong>。サイトが保護なしになることはありません。すべての設定、IPホワイトリスト、ログは保持されます。いつでもライセンスを更新でき、すべてのPRO機能がデータ損失なしで再有効化されます。',
 'faq7_a': 'WordPress管理から削除すると、プラグインは自動的にすべてのデータ（ログ、設定、ブロックリスト）をクリーンアップします。痕跡は残りません。',
+    'footer_plugin': 'プラグイン：',
     },
 
     ko: {
@@ -1910,6 +1919,7 @@ const Translations = {
 'pro10_desc': '6시간마다 중요한 WordPress 파일 모니터링. 변경 시 이메일 알림. 관리자 패널에서 변경 이력.',
 'faq3_a': 'PRO 기능은 비활성화되지만 <strong>기본 보호는 계속 작동합니다</strong>. 사이트가 보호되지 않은 상태로 남지 않습니다. 모든 설정, IP 화이트리스트 및 로그가 보존됩니다. 언제든지 라이선스를 갱신할 수 있으며 — 모든 PRO 기능이 데이터 손실 없이 재활성화됩니다.',
 'faq7_a': 'WordPress 관리자를 통해 삭제하면 플러그인이 자동으로 모든 데이터(로그, 설정, 차단 목록)를 정리합니다. 흔적이 남지 않습니다.',
+    'footer_plugin': '플러그인:',
     }
 };
 
