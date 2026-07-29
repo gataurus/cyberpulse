@@ -183,6 +183,14 @@ const Translations = {
         why_us_3_desc: 'Новые функции добавляются каждый месяц. Плагин постоянно совершенствуется.',
         why_us_4_title: '10 языков',
         why_us_4_desc: 'Интерфейс переведён на русский, английский, немецкий, французский, итальянский, испанский, португальский, китайский, японский и корейский.',
+    'pro6_title': '📧 Еженедельный отчёт безопасности',
+'pro6_desc': 'Автоматическая отправка сводки по безопасности на email администратора: количество атак, топ нарушителей, статистика за неделю. Настраиваемый день и время отправки.',
+'pro7_desc': 'Ежедневная проверка PHP, JS, INC, TXT файлов. Обнаруживает eval-вставки, base64-декодеры, скрытые файлы. Белый список файлов и папок-исключений. Кнопка «Это безопасно» для ложных срабатываний.',
+'pro8_desc': 'Три уровня защиты на уровне приложения (Layer 7). Настраиваемые пороги. Блокировка медленных соединений. Автоматический постоянный бан подсети.',
+'pro9_desc': 'Глобальная база вредоносных IP из 4 источников (blocklist.de, Tor exit nodes). Автообновление. Мгновенная блокировка подсети /24. Встроенный список при недоступности сервисов.',
+'pro10_desc': 'Мониторинг критических файлов WordPress каждые 6 часов. Уведомления при изменениях на email администратора. История изменений в админке.',
+'faq3_a': 'PRO-функции отключатся, но <strong>базовая защита продолжит работать</strong>. Ваш сайт не останется без защиты. Все ваши настройки, белый список IP и логи сохранятся. Вы можете продлить лицензию в любой момент — все PRO-функции снова активируются без потери данных.',
+'faq7_a': 'При удалении через админку WordPress плагин автоматически очищает все свои данные: логи, настройки, списки блокировок. Никаких следов не остаётся.',
     },
 
     en: {
@@ -366,6 +374,14 @@ const Translations = {
         why_us_3_desc: 'New features are added every month. The plugin is constantly being improved.',
         why_us_4_title: '10 Languages',
         why_us_4_desc: 'Interface translated into Russian, English, German, French, Italian, Spanish, Portuguese, Chinese, Japanese, and Korean.',
+    'pro6_title': '📧 Weekly Security Report',
+'pro6_desc': 'Automated weekly security summary sent to administrator email: attack count, top offenders, weekly statistics. Configurable day and time.',
+'pro7_desc': 'Daily scan of PHP, JS, INC, TXT files. Detects eval-injections, base64-decoders, hidden files. Whitelist for files and exclusion folders. "This is safe" button for false positives.',
+'pro8_desc': 'Three layers of application-level protection (Layer 7). Configurable thresholds. Slow connection blocking. Automatic permanent subnet ban.',
+'pro9_desc': 'Global malicious IP database from 4 sources (blocklist.de, Tor exit nodes). Auto-updating. Instant /24 subnet block. Built-in fallback list when services are unavailable.',
+'pro10_desc': 'Critical WordPress file monitoring every 6 hours. Email notifications on changes. Change history in admin panel.',
+'faq3_a': 'PRO features will be disabled, but <strong>basic protection continues to work</strong>. Your site will not be left unprotected. All your settings, IP whitelist and logs are preserved. You can renew your license at any time — all PRO features will reactivate without data loss.',
+'faq7_a': 'When deleted through WordPress admin, the plugin automatically cleans all its data: logs, settings, block lists. No traces remain.',
     },
 
     de: {
@@ -549,6 +565,14 @@ const Translations = {
         why_us_3_desc: 'Jeden Monat werden neue Funktionen hinzugefügt. Das Plugin wird ständig verbessert.',
         why_us_4_title: '10 Sprachen',
         why_us_4_desc: 'Oberfläche übersetzt in 10 Sprachen.',
+    'pro6_title': '📧 Wöchentlicher Sicherheitsbericht',
+'pro6_desc': 'Automatisierte wöchentliche Sicherheitszusammenfassung per E-Mail an den Administrator: Anzahl der Angriffe, Top-Angreifer, wöchentliche Statistiken. Konfigurierbarer Tag und Uhrzeit.',
+'pro7_desc': 'Tägliche Überprüfung von PHP-, JS-, INC-, TXT-Dateien. Erkennt Eval-Injections, Base64-Decoder, versteckte Dateien. Whitelist für Dateien und Ausschlussordner. Schaltfläche "Das ist sicher" für Fehlalarme.',
+'pro8_desc': 'Drei Schutzebenen auf Anwendungsebene (Layer 7). Konfigurierbare Schwellenwerte. Blockierung langsamer Verbindungen. Automatische permanente Subnetz-Sperre.',
+'pro9_desc': 'Globale Datenbank mit bösartigen IPs aus 4 Quellen (blocklist.de, Tor-Exit-Nodes). Automatische Aktualisierung. Sofortige /24-Subnetz-Blockierung. Integrierte Fallback-Liste bei Nichtverfügbarkeit der Dienste.',
+'pro10_desc': 'Überwachung kritischer WordPress-Dateien alle 6 Stunden. E-Mail-Benachrichtigungen bei Änderungen. Änderungshistorie im Admin-Panel.',
+'faq3_a': 'PRO-Funktionen werden deaktiviert, aber <strong>der Basisschutz funktioniert weiter</strong>. Ihre Website bleibt nicht ungeschützt. Alle Einstellungen, IP-Whitelist und Protokolle bleiben erhalten. Sie können Ihre Lizenz jederzeit verlängern — alle PRO-Funktionen werden ohne Datenverlust reaktiviert.',
+'faq7_a': 'Bei der Löschung über die WordPress-Administration bereinigt das Plugin automatisch alle seine Daten: Protokolle, Einstellungen, Sperrlisten. Es bleiben keine Spuren zurück.',
     },
 
     fr: {
@@ -732,6 +756,14 @@ const Translations = {
         why_us_3_desc: 'De nouvelles fonctionnalités sont ajoutées chaque mois. Le plugin est constamment amélioré.',
         why_us_4_title: '10 langues',
         why_us_4_desc: 'Interface traduite en 10 langues.',
+    'pro6_title': '📧 Rapport de sécurité hebdomadaire',
+'pro6_desc': 'Résumé de sécurité hebdomadaire automatisé envoyé par e-mail à l\'administrateur : nombre d\'attaques, principaux contrevenants, statistiques hebdomadaires. Jour et heure configurables.',
+'pro7_desc': 'Analyse quotidienne des fichiers PHP, JS, INC, TXT. Détecte les injections eval, les décodeurs base64, les fichiers cachés. Liste blanche pour les fichiers et dossiers d\'exclusion. Bouton "C\'est sûr" pour les faux positifs.',
+'pro8_desc': 'Trois niveaux de protection au niveau applicatif (couche 7). Seuils configurables. Blocage des connexions lentes. Bannissement permanent automatique du sous-réseau.',
+'pro9_desc': 'Base de données mondiale d\'IP malveillantes provenant de 4 sources (blocklist.de, nœuds de sortie Tor). Mise à jour automatique. Blocage instantané du sous-réseau /24. Liste de secours intégrée en cas d\'indisponibilité des services.',
+'pro10_desc': 'Surveillance des fichiers WordPress critiques toutes les 6 heures. Notifications par e-mail en cas de modifications. Historique des modifications dans le panneau d\'administration.',
+'faq3_a': 'Les fonctions PRO seront désactivées, mais <strong>la protection de base continue de fonctionner</strong>. Votre site ne sera pas laissé sans protection. Tous vos paramètres, liste blanche IP et journaux sont conservés. Vous pouvez renouveler votre licence à tout moment — toutes les fonctions PRO se réactiveront sans perte de données.',
+'faq7_a': 'Lors de la suppression via l\'administration WordPress, le plugin nettoie automatiquement toutes ses données : journaux, paramètres, listes de blocage. Aucune trace ne reste.',
     },
 
     it: {
@@ -915,6 +947,14 @@ const Translations = {
         why_us_3_desc: 'Nuove funzionalità vengono aggiunte ogni mese. Il plugin è in costante miglioramento.',
         why_us_4_title: '10 lingue',
         why_us_4_desc: 'Interfaccia tradotta in 10 lingue.',
+    'pro6_title': '📧 Rapporto settimanale di sicurezza',
+'pro6_desc': 'Riepilogo settimanale automatizzato della sicurezza inviato all\'email dell\'amministratore: numero di attacchi, principali trasgressori, statistiche settimanali. Giorno e ora configurabili.',
+'pro7_desc': 'Scansione giornaliera di file PHP, JS, INC, TXT. Rileva eval-injections, decoder base64, file nascosti. Whitelist per file e cartelle di esclusione. Pulsante "Questo è sicuro" per i falsi positivi.',
+'pro8_desc': 'Tre livelli di protezione a livello applicativo (Layer 7). Soglie configurabili. Blocco delle connessioni lente. Ban permanente automatico della sottorete.',
+'pro9_desc': 'Database globale di IP dannosi da 4 fonti (blocklist.de, nodi di uscita Tor). Aggiornamento automatico. Blocco istantaneo della sottorete /24. Lista di fallback integrata quando i servizi non sono disponibili.',
+'pro10_desc': 'Monitoraggio dei file critici di WordPress ogni 6 ore. Notifiche email in caso di modifiche. Cronologia delle modifiche nel pannello di amministrazione.',
+'faq3_a': 'Le funzioni PRO saranno disattivate, ma <strong>la protezione di base continua a funzionare</strong>. Il tuo sito non rimarrà senza protezione. Tutte le impostazioni, la whitelist IP e i registri vengono conservati. Puoi rinnovare la licenza in qualsiasi momento — tutte le funzioni PRO si riattiveranno senza perdita di dati.',
+'faq7_a': 'Quando viene eliminato tramite l\'amministrazione di WordPress, il plugin pulisce automaticamente tutti i suoi dati: registri, impostazioni, liste di blocco. Non rimane alcuna traccia.',
     },
 
     es: {
@@ -1098,6 +1138,14 @@ const Translations = {
         why_us_3_desc: 'Se añaden nuevas funciones cada mes. El plugin se mejora constantemente.',
         why_us_4_title: '10 idiomas',
         why_us_4_desc: 'Interfaz traducida a 10 idiomas.',
+    'pro6_title': '📧 Informe de seguridad semanal',
+'pro6_desc': 'Resumen de seguridad semanal automatizado enviado al correo del administrador: número de ataques, principales infractores, estadísticas semanales. Día y hora configurables.',
+'pro7_desc': 'Escaneo diario de archivos PHP, JS, INC, TXT. Detecta inyecciones eval, decodificadores base64, archivos ocultos. Lista blanca para archivos y carpetas de exclusión. Botón "Esto es seguro" para falsos positivos.',
+'pro8_desc': 'Tres niveles de protección a nivel de aplicación (Capa 7). Umbrales configurables. Bloqueo de conexiones lentas. Prohibición permanente automática de subred.',
+'pro9_desc': 'Base de datos global de IPs maliciosas de 4 fuentes (blocklist.de, nodos de salida Tor). Actualización automática. Bloqueo instantáneo de subred /24. Lista de respaldo integrada cuando los servicios no están disponibles.',
+'pro10_desc': 'Monitoreo de archivos críticos de WordPress cada 6 horas. Notificaciones por correo electrónico sobre cambios. Historial de cambios en el panel de administración.',
+'faq3_a': 'Las funciones PRO se desactivarán, pero <strong>la protección básica sigue funcionando</strong>. Su sitio no quedará desprotegido. Todas sus configuraciones, lista blanca de IP y registros se conservan. Puede renovar su licencia en cualquier momento — todas las funciones PRO se reactivarán sin pérdida de datos.',
+'faq7_a': 'Al eliminarlo a través de la administración de WordPress, el plugin limpia automáticamente todos sus datos: registros, configuraciones, listas de bloqueo. No queda ningún rastro.',
     },
 
     pt: {
@@ -1281,6 +1329,14 @@ const Translations = {
         why_us_3_desc: 'Novos recursos são adicionados a cada mês. O plugin é constantemente aprimorado.',
         why_us_4_title: '10 idiomas',
         why_us_4_desc: 'Interface traduzida em 10 idiomas.',
+    'pro6_title': '📧 Relatório semanal de segurança',
+'pro6_desc': 'Resumo de segurança semanal automatizado enviado para o e-mail do administrador: número de ataques, principais infratores, estatísticas semanais. Dia e hora configuráveis.',
+'pro7_desc': 'Verificação diária de arquivos PHP, JS, INC, TXT. Detecta injeções eval, decodificadores base64, arquivos ocultos. Lista branca para arquivos e pastas de exclusão. Botão "Isto é seguro" para falsos positivos.',
+'pro8_desc': 'Três níveis de proteção em nível de aplicação (Camada 7). Limiares configuráveis. Bloqueio de conexões lentas. Banimento permanente automático de sub-rede.',
+'pro9_desc': 'Banco de dados global de IPs maliciosos de 4 fontes (blocklist.de, nós de saída Tor). Atualização automática. Bloqueio instantâneo de sub-rede /24. Lista de fallback integrada quando os serviços estão indisponíveis.',
+'pro10_desc': 'Monitoramento de arquivos críticos do WordPress a cada 6 horas. Notificações por e-mail sobre alterações. Histórico de alterações no painel de administração.',
+'faq3_a': 'As funções PRO serão desativadas, mas <strong>a proteção básica continua funcionando</strong>. Seu site não ficará desprotegido. Todas as configurações, lista branca de IP e registros são preservados. Você pode renovar sua licença a qualquer momento — todas as funções PRO serão reativadas sem perda de dados.',
+'faq7_a': 'Ao ser excluído através da administração do WordPress, o plugin limpa automaticamente todos os seus dados: registros, configurações, listas de bloqueio. Nenhum vestígio permanece.',
     },
 
     zh: {
@@ -1464,6 +1520,14 @@ const Translations = {
         why_us_3_desc: '每月添加新功能。插件不断改进。',
         why_us_4_title: '10种语言',
         why_us_4_desc: '界面翻译成10种语言。',
+    'pro6_title': '📧 每周安全报告',
+'pro6_desc': '自动发送每周安全摘要到管理员邮箱：攻击次数、主要攻击者、每周统计。可配置日期和时间。',
+'pro7_desc': '每日扫描 PHP、JS、INC、TXT 文件。检测 eval 注入、base64 解码器、隐藏文件。文件和排除文件夹的白名单。"这是安全的"按钮用于误报。',
+'pro8_desc': '应用层（第7层）三级保护。可配置阈值。慢速连接阻止。自动永久子网封禁。',
+'pro9_desc': '来自4个来源（blocklist.de、Tor 出口节点）的全球恶意 IP 数据库。自动更新。即时 /24 子网阻止。服务不可用时内置备用列表。',
+'pro10_desc': '每6小时监控关键 WordPress 文件。更改时发送邮件通知。管理面板中的更改历史记录。',
+'faq3_a': 'PRO 功能将被禁用，但<strong>基本保护继续工作</strong>。您的网站不会失去保护。所有设置、IP 白名单和日志都会保留。您可以随时续订许可证 — 所有 PRO 功能将重新激活而不会丢失数据。',
+'faq7_a': '通过 WordPress 管理删除时，插件会自动清理所有数据：日志、设置、阻止列表。不留下任何痕迹。',
     },
 
     ja: {
@@ -1647,6 +1711,14 @@ const Translations = {
         why_us_3_desc: '毎月新しい機能が追加されます。プラグインは常に改善されています。',
         why_us_4_title: '10言語',
         why_us_4_desc: 'インターフェースは10言語に翻訳されています。',
+    'pro6_title': '📧 週次セキュリティレポート',
+'pro6_desc': '管理者のメールに自動送信される週次のセキュリティ概要：攻撃数、トップ違反者、週次統計。設定可能な曜日と時間。',
+'pro7_desc': 'PHP、JS、INC、TXTファイルの日次スキャン。evalインジェクション、base64デコーダー、隠しファイルを検出。ファイルと除外フォルダーのホワイトリスト。誤検出用の「これは安全です」ボタン。',
+'pro8_desc': 'アプリケーションレベル（レイヤー7）での3層保護。設定可能なしきい値。低速接続のブロック。自動永続サブネット禁止。',
+'pro9_desc': '4つのソース（blocklist.de、Tor出口ノード）からのグローバルな悪意のあるIPデータベース。自動更新。即時/24サブネットブロック。サービス利用不可時の組み込みフォールバックリスト。',
+'pro10_desc': '6時間ごとの重要なWordPressファイルの監視。変更時のメール通知。管理パネルでの変更履歴。',
+'faq3_a': 'PRO機能は無効になりますが、<strong>基本保護は引き続き機能します</strong>。サイトが保護なしになることはありません。すべての設定、IPホワイトリスト、ログは保持されます。いつでもライセンスを更新でき、すべてのPRO機能がデータ損失なしで再有効化されます。',
+'faq7_a': 'WordPress管理から削除すると、プラグインは自動的にすべてのデータ（ログ、設定、ブロックリスト）をクリーンアップします。痕跡は残りません。',
     },
 
     ko: {
@@ -1830,6 +1902,14 @@ const Translations = {
         why_us_3_desc: '매월 새로운 기능이 추가됩니다. 플러그인은 지속적으로 개선됩니다.',
         why_us_4_title: '10개 언어',
         why_us_4_desc: '인터페이스가 10개 언어로 번역되었습니다.',
+        'pro6_title': '📧 주간 보안 보고서',
+'pro6_desc': '관리자 이메일로 자동 전송되는 주간 보안 요약: 공격 수, 주요 위반자, 주간 통계. 설정 가능한 요일 및 시간.',
+'pro7_desc': 'PHP, JS, INC, TXT 파일의 일일 스캔. eval 인젝션, base64 디코더, 숨겨진 파일을 탐지합니다. 파일 및 제외 폴더에 대한 화이트리스트. 오탐지를 위한 "안전합니다" 버튼.',
+'pro8_desc': '애플리케이션 수준(레이어 7)에서의 3중 보호. 구성 가능한 임계값. 느린 연결 차단. 자동 영구 서브넷 차단.',
+'pro9_desc': '4개 소스(blocklist.de, Tor 출구 노드)의 글로벌 악성 IP 데이터베이스. 자동 업데이트. 즉시 /24 서브넷 차단. 서비스 이용 불가 시 내장 폴백 목록.',
+'pro10_desc': '6시간마다 중요한 WordPress 파일 모니터링. 변경 시 이메일 알림. 관리자 패널에서 변경 이력.',
+'faq3_a': 'PRO 기능은 비활성화되지만 <strong>기본 보호는 계속 작동합니다</strong>. 사이트가 보호되지 않은 상태로 남지 않습니다. 모든 설정, IP 화이트리스트 및 로그가 보존됩니다. 언제든지 라이선스를 갱신할 수 있으며 — 모든 PRO 기능이 데이터 손실 없이 재활성화됩니다.',
+'faq7_a': 'WordPress 관리자를 통해 삭제하면 플러그인이 자동으로 모든 데이터(로그, 설정, 차단 목록)를 정리합니다. 흔적이 남지 않습니다.',
     }
 };
 
