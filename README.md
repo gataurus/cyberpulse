@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Version](https://img.shields.io/badge/version-5.8.8-blue.svg)](https://github.com/gataurus/cyberpulse)
+[![Download](https://img.shields.io/badge/download-v5.8.8-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -32,6 +32,14 @@ Full feature list: [wordpress.org/plugins/cyberpulse](https://wordpress.org/plug
 
 ---
 
+## 📥 Download
+
+[Download latest release](https://github.com/gataurus/cyberpulse/releases/latest)
+
+Or install directly from WordPress admin: **Plugins → Add New → search "CyberPulse"**
+
+---
+
 ## 🔓 Upgrade to PRO
 
 | Feature | 🆓 Free | 🛡️ PRO |
@@ -47,16 +55,7 @@ Full feature list: [wordpress.org/plugins/cyberpulse](https://wordpress.org/plug
 | Content Protection | ❌ | ✅ |
 | Threat Intelligence | ❌ | ✅ |
 
-**[View PRO plans](https://gataurus.github.io/cyberpulse-pro/#pricing)** — from 990₽/month.
-
----
-
-## 📦 Installation
-
-1. Install from [WordPress.org](https://wordpress.org/plugins/cyberpulse/)
-2. Go to **Plugins → Add New** → search "CyberPulse"
-3. Install and activate
-4. Configure via **CyberPulse** menu in admin panel
+**[View PRO plans](https://gataurus.github.io/cyberpulse-pro/#pricing)** — from $9.90/month.
 
 ---
 
