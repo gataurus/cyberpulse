@@ -11,7 +11,7 @@
 
 **Author:** [gataurus](https://github.com/gataurus)  
 **Plugin Page:** [WordPress.org/plugins/cyberpulse](https://wordpress.org/plugins/cyberpulse)  
-**PRO Version:** [CyberPulse PRO](https://github.com/gataurus/cyberpulse-pro)
+**PRO Version:** [CyberPulse PRO](https://github.com/gataurus/cyberpulse-pro) | [Website](https://gataurus.github.io/cyberpulse-pro)
 
 ---
 
@@ -47,7 +47,7 @@ Full feature list: [wordpress.org/plugins/cyberpulse](https://wordpress.org/plug
 | Content Protection | ❌ | ✅ |
 | Threat Intelligence | ❌ | ✅ |
 
-**[View PRO plans](https://gataurus.github.io/cyberpulse/#pricing)** — from 990₽/month.
+**[View PRO plans](https://gataurus.github.io/cyberpulse-pro/#pricing)** — from 990₽/month.
 
 ---
 
