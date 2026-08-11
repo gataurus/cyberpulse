@@ -1,66 +1,93 @@
-=== CyberPulse — WordPress Security & Bot Protection ===
+=== CyberPulse — Advanced Security & Bot Protection ===
 Contributors: gataurus
-Tags: security, firewall, bot-protection, brute-force
+Tags: security, firewall, bot-protection, brute-force, anti-spam
 Requires at least: 5.3
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 5.8.8
+Stable tag: 5.8.9.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-CyberPulse — the heartbeat of your WordPress security. Real-time bot blocking, brute force defense, and AI scraping protection.
+Real-time security firewall. Blocks bots, brute force attacks, XSS, and AI scrapers. 10 languages, lightweight, no ads.
 
 == Description ==
 
-CyberPulse — the heartbeat of your WordPress security.
+CyberPulse is a powerful security firewall that protects your website 24/7.
 
-Every second, every request, every visitor — under control. Like a pulse, CyberPulse monitors your site 24/7 and reacts instantly to any threat.
+Every request is analyzed in real time. Bots, scanners, and attackers are blocked instantly — before they reach your site. The plugin detects suspicious behavior, blocks AI data collectors like GPTBot and ClaudeBot, and stops brute force attacks with automatic IP bans.
 
-**Feel the pulse of real protection.**
+**Why Choose CyberPulse:**
 
-**Features:**
+* **Real-Time Protection** — monitors every request and blocks threats instantly
+* **Lightweight & Fast** — no database load, logs stored in files with automatic cleanup
+* **10 Languages** — Russian, English, German, French, Italian, Spanish, Portuguese, Chinese, Japanese, Korean
+* **Easy to Use** — install and protect your site in under a minute
+* **No Ads** — clean interface, no upsells in your admin panel
+* **Works with Caching** — compatible with WP Rocket, W3 Total Cache, LiteSpeed Cache, and CDN services
+
+**Protection Features:**
 
 * AI Scraping Protection — blocks GPTBot, ClaudeBot, PerplexityBot, CCBot, and other AI data collectors
-* 10 Interface Languages — Russian, German, French, Italian, Spanish, Portuguese, Chinese, Japanese, Korean, English
-* Multi-layer bot detection (11 independent checks: User-Agent, HTTP headers, Referer, Accept-Language)
-* Brute force protection with automatic permanent /24 subnet ban
-* WordPress system files hiding
-* Rate Limiting with configurable thresholds
-* IP whitelist (manual + automatic server and search engine detection)
-* Comprehensive log viewer with statistics and analysis
+* Multi-layer bot detection (11 independent checks: User-Agent, HTTP headers, Referer, Accept-Language, and more)
+* Brute force protection — automatic permanent /24 subnet ban after exceeding attempt limit
+* WordPress system files hiding — blocks access to wp-config.php, .env, .git, and other sensitive files
+* Rate Limiting — configurable request limits to prevent DDoS and aggressive scraping
+* IP Whitelist — manual and automatic (server IP, search engines, administrator IPs)
+* XSS attack protection — blocks cross-site scripting in requests
+* 404 scanner detection — blocks vulnerability scanners by excessive 404 errors
+* URL Firewall — manual path blocking for specific endpoints
+* User-Agent blacklist with statistics — block specific bots by User-Agent
+* Referer verification — blocks suspicious requests without proper Referer header
+* Security score dashboard — hourly attack histogram, fix recommendations
 * Email alerts on attack spikes
-* Real-time security dashboard with hourly attack histogram
-* Security score assessment with fix recommendations
-* XSS and hidden file scanner protection
-* Referer verification for tracked pages
-* 404 error scanner detection with automatic blocking
-* URL firewall for manual path blocking
-* User-Agent blacklist with statistics
+* Event audit log — track logins, settings changes, and plugin activity
+* Dark & Light theme for admin panel
 
 == Installation ==
 
-1. Upload `cyberpulse` folder to `/wp-content/plugins/`
-2. Activate through WordPress admin
-3. Navigate to **CyberPulse** in the admin menu
-4. Configure protection settings in the Dashboard
+1. Go to **Plugins → Add New** in your WordPress admin
+2. Search for "CyberPulse"
+3. Click **Install Now** and then **Activate**
+4. Navigate to **CyberPulse** in the admin menu
+5. Your site is protected — default settings provide optimal security
 
 == Frequently Asked Questions ==
 
-= Does it work with Cloudflare? =
+= How does bot detection work? =
 
-Yes. CyberPulse fully supports Cloudflare and correctly detects real visitor IPs via HTTP_CF_CONNECTING_IP header.
+CyberPulse analyzes 11 parameters of every request: User-Agent, HTTP headers, Accept-Language, Referer, browser headers (Sec-Fetch-*), and more. Suspicious requests are blocked automatically with temporary or permanent IP bans.
+
+= Does it slow down my site? =
+
+No. CyberPulse is designed to be lightweight. All checks use efficient caching, and logs are stored in files — not in the database. It works smoothly with high-traffic sites.
+
+= Is it compatible with caching and CDN services? =
+
+Yes. CyberPulse works with WP Rocket, W3 Total Cache, LiteSpeed Cache, Cloudflare, and other CDN and caching solutions. Real visitor IPs are correctly detected via proxy headers.
 
 = Will it block search engines? =
 
-No. Google, Bing, Yandex, Baidu, and other legitimate search bots are automatically detected and whitelisted by IP subnet and User-Agent.
+No. Google, Bing, Yandex, Baidu, DuckDuckGo, and other legitimate search bots are automatically detected and whitelisted by IP subnet and User-Agent signature.
 
-= Can I whitelist my IP? =
+= Can I whitelist my IP or specific services? =
 
-Yes. You can whitelist IPs, subnets (CIDR), hostnames, User-Agent patterns, and specific URL paths from protection checks.
+Yes. You can whitelist IPs, subnets (CIDR), hostnames, User-Agent patterns, and specific URL paths. Administrators are automatically whitelisted on login.
+
+= How does brute force protection work? =
+
+When failed login attempts exceed the limit (default: 5 attempts in 15 minutes), the entire /24 subnet is permanently blocked. No temporary bans — attackers go straight to permanent block.
+
+= Does it protect against AI scraping? =
+
+Yes. CyberPulse blocks known AI training bots: GPTBot (OpenAI), ClaudeBot (Anthropic), PerplexityBot, CCBot (Common Crawl), and others. AI scrapers are detected by User-Agent and IP signatures.
 
 = How is this different from other security plugins? =
 
-CyberPulse offers AI scraping protection and supports 10 languages with a modern UI and real-time dashboard.
+CyberPulse offers AI scraping protection, 10 languages out of the box, a real-time dashboard with hourly attack histogram, and a clean interface with no ads or upsells. It's lightweight and stores logs in files — not in your database.
+
+= Is there a PRO version? =
+
+Yes. PRO adds 2FA authentication, geo-blocking (195 countries), DDoS protection, malware scanner, content copy protection, file integrity monitoring, and more. [Learn more](https://cyberpulse-security.com/)
 
 == Screenshots ==
 
@@ -73,26 +100,13 @@ CyberPulse offers AI scraping protection and supports 10 languages with a modern
 
 == Changelog ==
 
-= 5.8.8 =
-* Fixed: SQL compatibility with MariaDB
+= 5.8.9 =
+* Added translation files for 10 languages
+* Updated PRO website link
+* Fixed SQL compatibility with MariaDB
 
 = 5.8.6 =
-* AI scraping protection — blocks GPTBot, ClaudeBot, PerplexityBot, and other AI data collectors
-* Multi-layer bot detection with 11 independent checks
-* Brute force protection with automatic permanent /24 subnet ban
-* WordPress system files hiding and version concealment
-* Rate Limiting with configurable thresholds
-* IP whitelist with automatic server and search engine detection
-* Real-time security dashboard with hourly attack histogram
-* Security score assessment with fix recommendations
-* 10 interface languages with auto-detection
-* Dark and light theme support
-* XSS and hidden file scanner protection
-* 404 error scanner detection with automatic blocking
-* URL firewall for manual path blocking
-* User-Agent blacklist with statistics
-* Email alerts on attack spikes
-* Event audit log
+* Initial release with AI scraping protection, bot detection, brute force defense, and more
 
 == External Services ==
 
