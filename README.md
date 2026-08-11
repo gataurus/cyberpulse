@@ -1,4 +1,4 @@
-# 🛡️ CyberPulse — WordPress Security & Bot Protection
+# 🛡️ CyberPulse Security — WordPress Security & Bot Protection
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
@@ -11,17 +11,18 @@
 
 **Author:** [gataurus](https://github.com/gataurus)  
 **Plugin Page:** [WordPress.org/plugins/cyberpulse](https://wordpress.org/plugins/cyberpulse)  
-**PRO Version:** [CyberPulse PRO](https://github.com/gataurus/cyberpulse-pro) | [Website](https://gataurus.github.io/cyberpulse-pro)
+**Official Website:** [cyberpulse-security.com](https://cyberpulse-security.com/)  
+**PRO Version:** [Upgrade to PRO](https://cyberpulse-security.com/#pricing)
 
 ---
 
 ## 🚀 Features
 
-- 🤖 **AI Scraping Protection** — blocks GPTBot, ClaudeBot, PerplexityBot, CCBot
-- 🛡️ **Multi-Layer Bot Detection** — 11 independent checks
+- 🤖 **AI Scraping Protection** — blocks GPTBot, ClaudeBot, PerplexityBot, CCBot, Bytespider
+- 🛡️ **Multi-Layer Bot Detection** — 20+ independent checks
 - 🔐 **Brute Force Protection** — automatic permanent /24 subnet ban
 - 📊 **Real-Time Dashboard** — hourly attack histogram, security score
-- 🌍 **10 Interface Languages** — auto-detection
+- 🌍 **10 Interface Languages** — auto-detection (RU, EN, DE, FR, IT, ES, PT, ZH, JA, KO)
 - 🎨 **Dark & Light Theme**
 - 📝 **Event Audit Log** — logins, settings changes, plugin activation
 - 📧 **Email Attack Alerts**
@@ -34,7 +35,7 @@ Full feature list: [wordpress.org/plugins/cyberpulse](https://wordpress.org/plug
 
 ## 📥 Download
 
-[Download latest release](https://github.com/gataurus/cyberpulse/releases/latest)
+**[Download latest release](https://github.com/gataurus/cyberpulse/releases/latest)**
 
 Or install directly from WordPress admin: **Plugins → Add New → search "CyberPulse"**
 
@@ -47,15 +48,33 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 | Bot Detection | ✅ | ✅ |
 | Brute Force Protection | ✅ | ✅ |
 | AI Scraping Protection | ✅ | ✅ |
-| XSS Protection | ✅ | ✅ |
+| XSS & SQL Injection Protection | ✅ | ✅ |
+| Rate Limiting | ✅ | ✅ |
+| 404 Scanner Detection | ✅ | ✅ |
+| Event Audit Log | ✅ | ✅ |
+| Behavioral Analysis | ❌ | ✅ |
+| Cloudflare Turnstile | ❌ | ✅ |
 | 2FA Authentication | ❌ | ✅ |
-| DDoS Protection | ❌ | ✅ |
-| Geo-Blocking | ❌ | ✅ |
+| DDoS Protection (Advanced) | ❌ | ✅ |
+| Geo-Blocking (195 countries) | ❌ | ✅ |
 | Malware Scanner | ❌ | ✅ |
-| Content Protection | ❌ | ✅ |
+| Content Copy Protection | ❌ | ✅ |
+| File Integrity Monitoring | ❌ | ✅ |
 | Threat Intelligence | ❌ | ✅ |
+| Weekly Security Report | ❌ | ✅ |
+| CSP & Force HTTPS | ❌ | ✅ |
 
-**[View PRO plans](https://gataurus.github.io/cyberpulse-pro/#pricing)** — from $9.90/month.
+**[View PRO plans & pricing](https://cyberpulse-security.com/#pricing)** — from 990₽/month.
+
+---
+
+## 🌐 Official Website
+
+Visit **[cyberpulse-security.com](https://cyberpulse-security.com/)** for:
+- 📊 Full Free vs PRO comparison table
+- 💰 Pricing plans in multiple currencies
+- ❓ FAQ and documentation
+- 📧 Support contact
 
 ---
 
@@ -65,4 +84,4 @@ GNU General Public License v2.0 — see [LICENSE](LICENSE)
 
 ---
 
-**🛡️ Developed by [gataurus](https://github.com/gataurus)**
+**🛡️ Developed by [gataurus](https://github.com/gataurus) | [cyberpulse-security.com](https://cyberpulse-security.com/)**
