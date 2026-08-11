@@ -17,7 +17,7 @@ define('CYBERSEC_BRUTE_OPTION', 'secwall_brute_data');
 define('CYBERSEC_REPEAT_OPTION', 'secwall_repeat_offenders');
 define('CYBERSEC_PERMANENT_BLOCKED_SUBNETS', 'secwall_permanent_blocked_subnets');
 define('CYBERSEC_UA_BLOCKS_OPTION', 'secwall_blocked_user_agents');
-define('CYBERSEC_VERSION', '5.8.8');
+define('CYBERSEC_VERSION', '5.8.9.3');
 
 if (!file_exists(CYBERSEC_LOG_DIR)) {
     wp_mkdir_p(CYBERSEC_LOG_DIR);
