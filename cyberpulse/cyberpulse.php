@@ -1,16 +1,17 @@
 <?php
 /**
- * Plugin Name: CyberPulse — WordPress Security & Bot Protection
+ * Plugin Name: CyberPulse — Advanced Security & Bot Protection
  * Description: CyberPulse — сердцебиение безопасности вашего WordPress. Мониторинг каждого запроса в реальном времени, мгновенная блокировка ботов, защита от брутфорса и AI-скрапинга. Почувствуйте пульс защиты. Бесплатная версия с возможностью апгрейда до PRO.
- * Version: 5.8.8
+ * Version: 5.8.9.3
  * Author: CyberPulse Security
- * Author URI: https://gataurus.github.io/cyberpulse-pro/
+ * Author URI: https://cyberpulse-security.com
  * License: GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: cyberpulse
  * Domain Path: /languages
  * Requires at least: 5.3
  * Requires PHP: 7.4
+ * Tested up to: 7.0
  */
 if (!defined('ABSPATH')) exit;
 
