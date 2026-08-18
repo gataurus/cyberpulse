@@ -43,7 +43,7 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 
 ## 📊 Changelog
 
-### 5.8.9.8 — Security & Performance Update (2026-08-18)
+### 5.8.9.8 — Security & Performance Update
 
 **🔒 Security Fixes**
 - Added XSS protection with input sanitization across all user inputs
@@ -73,7 +73,7 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 - Works with all existing configurations
 - Recommended: clear any active caches after update
 
-### 5.8.9.7 — Performance & Security Update (2026-08-09)
+### 5.8.9.7 — Performance & Security Update
 
 **⚡ Performance Improvements**
 - Added Object Cache support for 15+ core functions (whitelist, offenders, threat level, UA stats, and more)
@@ -90,12 +90,12 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 - Expanded real browser detection with 50+ User-Agent patterns
 - Added detection for messengers, social networks, and automation tools
 
-### 5.8.9 — Internationalization Update (2026-08-01)
+### 5.8.9 — Internationalization Update
 - 🌍 Added translation files for 10 languages
 - 🔗 Updated PRO website link
 - 🛠️ Fixed SQL compatibility with MariaDB
 
-### 5.8.6 — Initial Release (2026-07-15)
+### 5.8.6 — Initial Release
 - 🚀 Initial release with AI scraping protection, bot detection, brute force defense, and more
 
 ---
@@ -123,7 +123,7 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 | Weekly Security Report | ❌ | ✅ |
 | CSP & Force HTTPS | ❌ | ✅ |
 
-**[View PRO plans & pricing](https://cyberpulse-security.com/#pricing)** — from 990₽/month.
+**[View PRO plans & pricing](https://cyberpulse-security.com/#pricing)** — from $10/month.
 
 ---
 
