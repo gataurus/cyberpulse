@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.0.0-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.0.1-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -42,6 +42,26 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.0.1 — Hotfix Release
+
+**🔧 Fixed**
+- Counter mismatch between statistics and log files (hotfix)
+- Statistics cache causing stale data (removed cache)
+- Duplicate entries in blocked/allowed logs (60-second dedup)
+- Tracked pages showing nested subpages (exact match only)
+- Internal/private IPs shown in logs
+
+**⚡ Improved**
+- Direct file counting for accurate real-time statistics
+- Log deduplication with 60-second window
+
+**🛠️ Upgrade Notes**
+- No breaking changes
+- Works with all existing configurations
+- Recommended: clear any active caches after update
+
+---
 
 ### 5.9.0.0 — Stats Accuracy & Dashboard Improvements
 
