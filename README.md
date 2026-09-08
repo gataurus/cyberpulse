@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.0.1-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.0.2-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -42,6 +42,31 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.0.2 — Performance & Security
+
+**⚡ Performance Improvements**
+- **cybersec_is_real_browser()** — reduced from 120+ stripos() calls to 3-4 preg_match() operations (95% faster)
+- **cybersec_is_legitimate_bot()** — reduced from 60+ operations to 5-10 (85% faster)
+
+**🚀 New Features**
+- Added PTR (reverse DNS) verification for legitimate bots (Googlebot, Bingbot, Yandex, etc.)
+- Added tooltips for statistics blocks with translations in all 10 languages
+
+**🔒 Security**
+- Added permanent block for system file access attempts (wp-config.php, .env, .git, etc.)
+
+**🛠️ Code Quality**
+- Optimized bot detection logic
+- Improved performance of legitimate bot verification
+- Code cleanup and optimization
+
+**🛠️ Upgrade Notes**
+- No breaking changes — all existing configurations are preserved
+- Recommended: Clear any active caches after update for optimal performance
+- All settings are preserved during update
+
+---
 
 ### 5.9.0.1 — Hotfix Release
 
