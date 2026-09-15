@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.0.3-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.0.4-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -42,6 +42,17 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.0.4 — 403 Block Page Redesign & Plugin Check Pass
+
+**🐛 Fixed**
+- 403 block page styles not loading — CSS file was referenced with the wrong filename (`cybersec-403.css` instead of `cyberpulse-403.css`), and `wp_print_styles()` does not work on a standalone 403 page. CSS/JS are now inlined directly into the block page HTML.
+
+**🎨 Added**
+- Pulsing glow animation on the 403 page shield icon — matches the CyberPulse brand identity.
+- Firmware shield-pulse icon (same as plugin logo) in the 403 page header and footer.
+
+---
 
 ### 5.9.0.3 — Permaban Hardening & Log Deduplication
 
