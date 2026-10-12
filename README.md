@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.0.5-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.0.6-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -42,6 +42,42 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.0.6 — Security Hardening & Bot Detection
+
+**🔒 Security**
+- Fixed brute force protection bypass via `_wpnonce` parameter
+- Fixed privilege escalation via whitelist `note` field — admin IPs now use explicit `auto_type` marker
+- Added fake bot detection — bots with impossible Chrome versions (>150) pretending to be Googlebot/YandexBot are now blocked before whitelist checks
+- Extended blockable file patterns — 30+ new patterns: `/@fs/`, `/proc/self/`, `/.aws/credentials`, `/.gcloud/`, `/actuator/`, `/wallet.dat`, single-char PHP shells
+- Added malformed Chrome UA detection — missing `AppleWebKit/` or `KHTML, like Gecko` marker now flagged
+- Old Chrome (<70) and Firefox (<60) versions now blocked unless genuine legacy browsers
+
+**🐛 Fixed**
+- XSS check on AJAX human verification now reads raw request data
+- Chrome parsers with fixed old builds now blocked
+- 404 detection false positives — Googlebot/YandexBot no longer get permabanned for checking broken links
+- Referer check order — cookie verification now happens before rate-limiting
+
+**✅ Added**
+- Extended bot UA blacklist (CVE-validators, unknown crawlers, NetAPI)
+- Extended AI bots list — AionBot, BeansLLM, SEOJuice, IAS Crawler, KlavdiaBot, GrokBot, xAI-Grok, MistralAI
+- Extended known bot subnets — Yandex.Cloud, Google/Bing IPv6, Facebook IPv6, Cloudflare IPv6, Apple IPv6
+- RSS readers whitelisted — Feedly, Inoreader, NewsBlur, Feedbin, Feedspot, Uptime Kuma
+
+**⚡ Performance**
+- Cached `cybersec_check_ai_scraper()` result within single request
+- Cached `cybersec_get_daily_stats()` — dashboard ~10x faster
+- Cached `cybersec_get_permanent_blocked_subnets()` with proper invalidation
+- Cached `cybersec_get_custom_whitelist()` — single query per request
+- Centralized hostname lookup — DNS query runs once per 12h
+
+**🧹 Cleanup**
+- Activated `cybersec_sync_page_logs_stats()` — page counters now auto-refresh every 5 min
+- Protected service logs — `audit.log`, `unblocks.log`, `integrity.log` no longer auto-deleted
+- Extended transient cleanup — handles all plugin patterns
+
+---
 
 ### 5.9.0.5 — Extended Bot Whitelist
 
