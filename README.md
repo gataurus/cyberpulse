@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.0.6-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.0.7-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -23,7 +23,7 @@
 - 🔐 **Brute Force Protection** — automatic permanent /24 subnet ban
 - 📊 **Real-Time Dashboard** — hourly attack histogram, security score
 - 🌍 **10 Interface Languages** — auto-detection (RU, EN, DE, FR, IT, ES, PT, ZH, JA, KO)
-- 🎨 **Dark & Light Theme**
+- 🎨 **Dark & Light Theme** — CyberPulse Daylight for daytime work
 - 📝 **Event Audit Log** — logins, settings changes, plugin activation
 - 📧 **Email Attack Alerts**
 - 🔍 **404 Scanner Detection** — auto-blocking
@@ -43,12 +43,34 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 
 ## 📊 Changelog
 
+### 5.9.0.7 — Search Engine Protection & UI Redesign
+
+**🔒 Security**
+- Search engine protection: Google, Yandex, Bing, Baidu, Apple, Meta, Telegram, Twitter, and Cloudflare subnets bypass permaban
+- Automated cleanup of search engine subnets from permanent block list
+- Instant-pass whitelist for verified search bots
+- Fake-UA guard: search bots with `Chrome/<digits>` in User-Agent fall back to regular checks
+- Subnet size guard: permaban skips subnets wider than /16 (IPv4) or /32 (IPv6)
+
+**⚡ Performance**
+- Rate limiting and 404 detection skip verified search engine bots
+- Merged whitelist checks into a single compact sanity check
+
+**✅ Added**
+- `cybersec_is_search_engine_subnet()` — centralized subnet check for Google, Bing, Yandex, Meta, Apple, Telegram, Twitter, Cloudflare
+- `cybersec_purge_search_engine_subnets_from_permaban()` — automated cleanup of permaban
+
+**🎨 UI**
+- Complete UI redesign — cleaner, more professional interface across all admin tabs
+- New light theme "CyberPulse Daylight" — warm green palette, brand grid pattern, saturated accent, chunky shadows
+
+---
+
 ### 5.9.0.6 — Security Hardening & Bot Detection
 
 **🔒 Security**
 - Fixed brute force protection bypass via `_wpnonce` parameter
 - Fixed privilege escalation via whitelist `note` field — admin IPs now use explicit `auto_type` marker
-- Added fake bot detection — bots with impossible Chrome versions (>150) pretending to be Googlebot/YandexBot are now blocked before whitelist checks
 - Extended blockable file patterns — 30+ new patterns: `/@fs/`, `/proc/self/`, `/.aws/credentials`, `/.gcloud/`, `/actuator/`, `/wallet.dat`, single-char PHP shells
 - Added malformed Chrome UA detection — missing `AppleWebKit/` or `KHTML, like Gecko` marker now flagged
 - Old Chrome (<70) and Firefox (<60) versions now blocked unless genuine legacy browsers
