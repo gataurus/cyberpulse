@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.0.7-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.0.8-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -43,6 +43,15 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 
 ## 📊 Changelog
 
+### 5.9.0.8 — Dashboard Performance & UI Overhaul
+
+* 🚀 **Major Performance Boost:** Complete dashboard overhaul — log files are now read only once, and CSS rendering optimizations allow you to smoothly view thousands of log rows without any lag.
+* ⚡ **Backend Optimization:** Restored object caching for threat levels, top offenders, and UA statistics. Rate limiting is now working properly, and background tasks are safely throttled.
+* 🎨 **Interactive Dashboard:** All cards (KPI and Pulse) are now clickable with smooth-scroll navigation to relevant sections. Added informative tooltips and replaced confusing percentages with clear numerical differences.
+
+<details>
+<summary>📜 <b>Click to view older releases (5.9.0.7 and below)</b></summary>
+
 ### 5.9.0.7 — Search Engine Protection & UI Redesign
 
 **🔒 Security**
@@ -71,8 +80,8 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 **🔒 Security**
 - Fixed brute force protection bypass via `_wpnonce` parameter
 - Fixed privilege escalation via whitelist `note` field — admin IPs now use explicit `auto_type` marker
-- Extended blockable file patterns — 30+ new patterns: `/@fs/`, `/proc/self/`, `/.aws/credentials`, `/.gcloud/`, `/actuator/`, `/wallet.dat`, single-char PHP shells
-- Added malformed Chrome UA detection — missing `AppleWebKit/` or `KHTML, like Gecko` marker now flagged
+- Extended blockable file patterns — 30+ new patterns
+- Added malformed Chrome UA detection
 - Old Chrome (<70) and Firefox (<60) versions now blocked unless genuine legacy browsers
 
 **🐛 Fixed**
@@ -117,11 +126,11 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ### 5.9.0.4 — 403 Block Page Redesign & Plugin Check Pass
 
 **🐛 Fixed**
-- 403 block page styles not loading — CSS file was referenced with the wrong filename (`cybersec-403.css` instead of `cyberpulse-403.css`), and `wp_print_styles()` does not work on a standalone 403 page. CSS/JS are now inlined directly into the block page HTML.
+- 403 block page styles not loading — CSS/JS are now inlined directly into the block page HTML.
 
 **🎨 Added**
-- Pulsing glow animation on the 403 page shield icon — matches the CyberPulse brand identity.
-- Firmware shield-pulse icon (same as plugin logo) in the 403 page header and footer.
+- Pulsing glow animation on the 403 page shield icon.
+- Firmware shield-pulse icon in the 403 page header and footer.
 
 ---
 
@@ -130,12 +139,11 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 **🔒 Security**
 - Added permaban check to all blocking functions (`hide_wordpress`, `hide_plugins_themes`, `rate_limiting`, `404_detection`, `url_firewall`)
 - Added permaban check to `cybersec_check_all` before all blocking checks
-- Fixed server IP retrieval (`cybersec_get_server_ip`) — proper `wp_unslash` + `sanitize_text_field`
+- Fixed server IP retrieval (`cybersec_get_server_ip`)
 
 **⚡ Improvements**
-- Static file exclusion in `hide_wordpress` — CSS, JS, images no longer trigger hide_wp checks
+- Static file exclusion in `hide_wordpress`
 - Added deduplication window in `cybersec_log_blocked_bot`
-- Added deduplication for repeated identical log entries in blocked/allowed logs
 
 ---
 
@@ -158,8 +166,8 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 
 **🔧 Fixed**
 - Counter mismatch between statistics and log files
-- Statistics cache causing stale data (removed cache)
-- Tracked pages showing nested subpages (exact match only)
+- Statistics cache causing stale data
+- Tracked pages showing nested subpages
 - Internal/private IPs shown in logs
 
 **⚡ Improvements**
@@ -185,20 +193,14 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ### 5.8.9.9 — Security Hardening
 
 **🔒 Critical Security Fixes**
-- Fixed XSS vulnerabilities in 403 block page — replaced `esc_url` with `esc_js` for JavaScript context
-- Added `wp_strip_all_tags()` before `htmlspecialchars()` in XSS detection
+- Fixed XSS vulnerabilities in 403 block page
 - Fixed SQL injection vulnerability in stale transients cleanup query
-
-**🔒 Additional Security**
 - Added `current_user_can('manage_options')` check to `cybersec_handle_simple_check()`
 - Added IP validation in `cybersec_ajax_human_verify()` AJAX handler
-- Added `sanitize_text_field()` for User-Agent in `track_user_agent()`
-- Fixed cookie removal logic in `cybersec_remove_all_blocks()`
 
 **⚡ Performance**
-- Throttling for `cybersec_cleanup_expired_temp_blocks()` (5-minute cooldown, 20% chance)
+- Throttling for `cybersec_cleanup_expired_temp_blocks()`
 - Fixed memory issue in `cybersec_fs_put_contents()` with large log files
-- Optimized log rotation with safe truncation
 
 ---
 
@@ -206,37 +208,29 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 
 **🔒 Security**
 - XSS protection with input sanitization across all user inputs
-- Nonce verification in AJAX human-verify handler (CSRF prevention)
+- Nonce verification in AJAX human-verify handler
 - Directory traversal protection in log functions
-- Extended 403 token lifetime (5 → 10 minutes)
-- Full data cleanup on IP unblock (cookies, cache, transients, statistics)
+- Full data cleanup on IP unblock
 
 **🚀 Performance**
 - `wp_cache` support for settings, whitelist, and permanent blocks
 - Reduced database queries with caching
-- Registered missing cron schedule `cyberpulse_every_5_minutes`
-
-**🛠️ Code Quality**
-- All WordPress Coding Standards warnings fixed (NonceVerification)
 
 ---
 
 ### 5.8.9.7 — Performance & Security
 
 **⚡ Performance**
-- Object Cache support for 15+ core functions (whitelist, offenders, threat level, UA stats, and more)
-- Optimized transient cleanup with 50% fewer SQL queries
-- Added caching for geo-location lookups (ip-api.com)
-- Improved log rotation with safe truncation to prevent file corruption
+- Object Cache support for 15+ core functions
+- Added caching for geo-location lookups
+- Improved log rotation with safe truncation
 
 **🛡️ Security Enhancements**
 - Removed browser header (Sec-Fetch-*) bypass
-- XSS validation now applies to ALL users, including whitelisted IPs
-- Rehab mode now requires cookie validation for safer unblocking
+- XSS validation now applies to ALL users
 
 **🤖 Bot Detection**
 - Expanded real browser detection with 50+ User-Agent patterns
-- Added detection for messengers, social networks, and automation tools
 
 ---
 
@@ -251,6 +245,8 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ### 5.8.6 — Initial Release
 
 - 🚀 Initial release with AI scraping protection, bot detection, brute force defense, and more
+
+</details>
 
 ---
 
