@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.0.8-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.0.9-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -19,7 +19,8 @@
 ## 🚀 Features
 
 - 🤖 **AI Scraping Protection** — blocks GPTBot, ClaudeBot, PerplexityBot, CCBot, Bytespider
-- 🛡️ **Multi-Layer Bot Detection** — 20+ independent checks
+- 🛡️ **Server-level `.htaccess` Protection** — optional (opt-in) blocking of sensitive files and AI bots directly at the Apache/LiteSpeed level
+- 🕵️ **Multi-Layer Bot Detection** — 20+ independent checks, including Mac+Chrome antidetect browser detection
 - 🔐 **Brute Force Protection** — automatic permanent /24 subnet ban
 - 📊 **Real-Time Dashboard** — hourly attack histogram, security score
 - 🌍 **10 Interface Languages** — auto-detection (RU, EN, DE, FR, IT, ES, PT, ZH, JA, KO)
@@ -43,14 +44,22 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 
 ## 📊 Changelog
 
+### 5.9.0.9 — Opt-in .htaccess, AI Bot Detection & UI Improvements
+
+* 🔒 **Security & Feature:** `.htaccess` protection is now **opt-in** (disabled by default) and managed via a new "AI Scraping Protection" settings block. The ruleset was also extended to block `.git`, `.env`, `.sql` dumps, and other sensitive files before PHP loads.
+* 🤖 **Bot Detection:** Unified and expanded detection logic — added 12 new AI bot signatures (Claude-User, xAI-Grok, etc.) and implemented Mac+Chrome antidetect checks to catch residential proxy bot farms. Also blocked fake GPTBot/ClaudeBot impersonation and scrapers masquerading as mobile apps (TikTokSpider, InstagramScraper).
+* 🎨 **UI:** Brute Force panel now displays the full history of login attempts (active and inactive) with clear limit indicators.
+* ⚙️ **Compatibility:** Removed SEO crawlers (AhrefsBot, SemrushBot, Moz, DataForSeoBot, etc.) from the `.htaccess` block. Paid SEO tools will no longer be blocked at the server level.
+* 🌍 **Translations:** Fully synchronized and updated localization for all 10 supported languages.
+
+<details>
+<summary>📜 <b>Click to view older releases (5.9.0.8 and below)</b></summary>
+
 ### 5.9.0.8 — Dashboard Performance & UI Overhaul
 
 * 🚀 **Major Performance Boost:** Complete dashboard overhaul — log files are now read only once, and CSS rendering optimizations allow you to smoothly view thousands of log rows without any lag.
 * ⚡ **Backend Optimization:** Restored object caching for threat levels, top offenders, and UA statistics. Rate limiting is now working properly, and background tasks are safely throttled.
 * 🎨 **Interactive Dashboard:** All cards (KPI and Pulse) are now clickable with smooth-scroll navigation to relevant sections. Added informative tooltips and replaced confusing percentages with clear numerical differences.
-
-<details>
-<summary>📜 <b>Click to view older releases (5.9.0.7 and below)</b></summary>
 
 ### 5.9.0.7 — Search Engine Protection & UI Redesign
 
@@ -257,6 +266,7 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 | Bot Detection | ✅ | ✅ |
 | Brute Force Protection | ✅ | ✅ |
 | AI Scraping Protection | ✅ | ✅ |
+| `.htaccess` Server Protection | ✅ | ✅ |
 | XSS & SQL Injection Protection | ✅ | ✅ |
 | Rate Limiting | ✅ | ✅ |
 | 404 Scanner Detection | ✅ | ✅ |
