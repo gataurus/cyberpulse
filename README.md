@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.0.9-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.0-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -43,6 +43,14 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.1.0 — Security Hardening & Performance
+
+* 🔒 **Security:** AI scraper check now runs first, before the human-test window. Bots that pass the captcha once are still checked against AI signatures on every subsequent request. Admin IPs remain exempt.
+* 🔒 **Security:** Request flood protection now issues temporary blocks for heuristic evidence (traffic spike, datacenter IP) and reserves permanent subnet bans for repeat offenders only — reduces false positives without weakening the protection.
+* 🔒 **Reliability:** Server IP is now re-validated every 24 hours instead of being cached indefinitely. A hosting migration or proxy change is picked up automatically, and private/reserved addresses from reverse-proxy setups are rejected at every step.
+* ⚡ **Performance:** Radically optimized admin panel loading by eliminating blocking GeoIP requests, implementing smart log reading (200KB) with a 1000-row display limit to prevent UI freezing (full files are still processed during download/copy).
+* ⚡ **Performance:** Log writes are now **~50× faster** on busy sites, with **~5× lower memory** use during rotation. Leftover `.log.1` files from older versions are cleaned up automatically.
 
 ### 5.9.0.9 — Opt-in .htaccess, AI Bot Detection & UI Improvements
 
