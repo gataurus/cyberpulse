@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.1.0-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.1-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -43,6 +43,12 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.1.1 — Security & Reliability Hotfix
+
+* 🔒 **Security:** User-Agent validation rewritten — hardcoded Chrome version threshold replaced with behavioural verification (Sec-Fetch-*, Client Hints, Accept-Language). 
+* 🤖 **Bot Detection:** Added WebView whitelist (Instagram, Facebook, TikTok, Telegram, Snapchat, Pinterest, LinkedIn, WeChat, LINE, KakaoTalk, Viber, Twitter) to prevent false positives on mobile in-app browsers.
+* ⚡ **Reliability:** Temporary blocks now survive `alloptions` cache invalidation — fixes rare cases where a blocked IP was allowed again within seconds.
 
 ### 5.9.1.0 — Security Hardening & Performance
 
