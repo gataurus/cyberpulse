@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.1.1-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.2-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -43,6 +43,18 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.1.2 — Configurable AI Bot Protection & Hardened `.htaccess`
+
+* 🤖 **AI Bot Protection is Now Configurable.** Added two independent toggles so you control exactly what gets blocked.
+  * 🧠 **AI Training Bots (default ON)** — Blocks bots that only download your content to train AI models (GPTBot, CCBot, Google-Extended, ClaudeBot, Bytespider, Amazonbot, etc.).
+  * 🔍 **AI Search Bots (default OFF)** — Blocks bots that index your site for AI search engines (OAI-SearchBot, ChatGPT-User, PerplexityBot, Amzn-SearchBot, etc.). Enable this if you want the old strict behavior.
+* 🆕 **Expanded Signature Database** — Added newly discovered AI bots to the detection map: `DuckAssistBot` (DuckDuckGo), `Amzn-User` (Amazon), `Grok-DeepSearch` (xAI), `QwenBot` (Alibaba), `DeepSeekBot`, `xAI-Crawler`, and `cohere-training-data-crawler`.
+* 🛡️ **Hardened `.htaccess` Protection:**
+  * **Regex Fix:** Fixed a critical bug where a space in the `IAS Crawler` signature could crash Apache (500 Error). Spaces are now properly converted to `\s+`.
+  * **Config Protection:** Added rules to block direct access to `.htaccess`, `.htpasswd`, and `.user.ini` files, including their backups.
+  * **wp-config Backups:** Improved the regex to reliably block `wp-config.php.bak`, `wp-config.php.zip`, etc.
+  * **Server-Aware UI:** The `.htaccess` settings panel now detects nginx or read-only setups and disables the checkbox if the rules cannot be applied.
 
 ### 5.9.1.1 — Security & Reliability Hotfix
 
