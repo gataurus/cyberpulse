@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.1.3-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.2-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -44,13 +44,6 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
-
-### 5.9.1.3 — Force HTTPS in Free Tier
-
-* 🔓 **Force HTTPS redirect moved from PRO to Free tier.** It is a base-tier feature available in every competing security plugin and never justified a paywall.
-* 🐛 **Fixed:** Force HTTPS checkbox previously displayed "Enabled" without a license while silently doing nothing. The PRO gate lived only in the execution path, not in the UI — the inconsistency is now gone entirely.
-* 🛡️ **Security:** Force HTTPS now respects `X-Forwarded-Proto: https` behind a TLS-terminating reverse proxy, preventing a redirect loop on misconfigured setups.
-* 🌍 **Translations:** Added Force HTTPS translations for all 10 supported languages.
 
 ### 5.9.1.2 — Configurable AI Bot Protection & Hardened `.htaccess`
 
