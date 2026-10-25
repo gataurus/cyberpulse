@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.1.2-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.3-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -20,9 +20,11 @@
 
 - 🤖 **AI Scraping Protection** — blocks GPTBot, ClaudeBot, PerplexityBot, CCBot, Bytespider
 - 🛡️ **Server-level `.htaccess` Protection** — optional (opt-in) blocking of sensitive files and AI bots directly at the Apache/LiteSpeed level
-- 🕵️ **Multi-Layer Bot Detection** — 20+ independent checks, including Mac+Chrome antidetect browser detection
+- 🕵️ **Multi-Layer Bot Detection** — 20+ independent checks, including outdated browsers (Chrome < 90, Firefox < 90) and Mac+Chrome antidetect detection
 - 🔐 **Brute Force Protection** — automatic permanent /24 subnet ban
 - 🔒 **Force HTTPS** — automatic 301 redirect with proxy-loop protection
+- ⏱️ **Smart Rate Limiting** — default 40 req/min with smart CGNAT warnings
+- 🛡️ **Custom Static 403 Page** — beautifully styled block page for server-level blocks
 - 📊 **Real-Time Dashboard** — hourly attack histogram, security score
 - 🌍 **10 Interface Languages** — auto-detection (RU, EN, DE, FR, IT, ES, PT, ZH, JA, KO)
 - 🎨 **Dark & Light Theme** — CyberPulse Daylight for daytime work
@@ -44,6 +46,16 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.1.3 — Rate Limiting, Static 403 Page & Force HTTPS
+
+* ⚡ **Performance:** Lowered the default Rate Limiting threshold from 60 to 40 requests per minute. Added a smart collapsible guide in the UI to help users choose the right value (with CGNAT and mobile carrier warnings).
+* 🛡️ **Custom Static 403 Page:** When `.htaccess` protection blocks a bot, it now displays a beautifully styled `cyberpulse-403.html` page instead of the hosting provider's default error page.
+* 🔧 **Better UX:** Replaced the "Back to Home" button with a "Refresh Page" button on the static block page, which is more useful for temporary blocks.
+* 🔒 **New Free Feature:** Force HTTPS 301 redirect with proxy-loop protection, full-width UI, and translations for all 10 supported languages.
+* 🤖 **Bot Detection:** Added outdated browser protection. Chrome < 90, Firefox < 90, and Safari < 14 are now flagged as bot signatures in the anomaly check (with exemptions for mobile devices and legitimate forks).
+* 🛡️ **SEO Crawler Toggle:** Added a new opt-in option in `.htaccess` settings to optionally block SEO crawlers (Ahrefs, Semrush, Moz) at the server level.
+* 🔒 **Security:** Added an early bypass for critical SEO and monetization files (`ads.txt`, `app-ads.txt`, `robots.txt`, `favicon.ico`, `sellers.json`, `security.txt`, and `/.well-known/`). Prevents AdSense/Let's Encrypt false positives. Fixed a bypass vulnerability in the URI check.
 
 ### 5.9.1.2 — Configurable AI Bot Protection & Hardened `.htaccess`
 
@@ -76,7 +88,6 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 * 🔒 **Security & Feature:** `.htaccess` protection is now **opt-in** (disabled by default) and managed via a new "AI Scraping Protection" settings block. The ruleset was also extended to block `.git`, `.env`, `.sql` dumps, and other sensitive files before PHP loads.
 * 🤖 **Bot Detection:** Unified and expanded detection logic — added 12 new AI bot signatures (Claude-User, xAI-Grok, etc.) and implemented Mac+Chrome antidetect checks to catch residential proxy bot farms. Also blocked fake GPTBot/ClaudeBot impersonation and scrapers masquerading as mobile apps (TikTokSpider, InstagramScraper).
 * 🎨 **UI:** Brute Force panel now displays the full history of login attempts (active and inactive) with clear limit indicators.
-* ⚙️ **Compatibility:** Removed SEO crawlers (AhrefsBot, SemrushBot, Moz, DataForSeoBot, etc.) from the `.htaccess` block. Paid SEO tools will no longer be blocked at the server level.
 * 🌍 **Translations:** Fully synchronized and updated localization for all 10 supported languages.
 
 <details>
