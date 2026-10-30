@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.1.3-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.4-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -46,6 +46,16 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.1.4 — Major UI Overhaul & Security Fixes
+
+* 🎨 **Major UI Overhaul:** Completely redesigned plugin interface to match the premium "CyberPulse" branding. Enjoy a refreshed dark theme and a fully reworked light theme ("CyberPulse Daylight") with a refined color palette, polished grid backgrounds, smoother transitions, and improved overall visual stability.
+* 🔒 **Security:** Prevented spoofed search engine User-Agents (e.g., fake Googlebot) from accessing sensitive files like `.env`, `config.yml`, or `wp-config.php.bak`. Hidden file pattern checks now run before the search bot whitelist.
+* 🎨 **Visual Log Analysis:** Tracked page logs are now highly informative. IPs are highlighted in yellow, URLs in green, and Referers in blue for instant visual parsing.
+* 🤖 **Bot Detection:** Added 9 Joomla/Drupal scanner signatures (`/administrator/components/com_*`, `/plugins/editors/*`, `/sites/default/*`, `/templates/system/*`, `/modules/mod_*`, etc.) to the hidden-file scanner. Joomla-targeting bots that hit 404s on WordPress sites are now blocked at first request instead of being counted toward the 404 threshold.
+* ⚡ **Reliability:** Geo-location lookups now use a 5-second timeout (was 2s), so the ip-api.com service can respond under load without being incorrectly marked as down.
+* 🐛 **Fixed:** Legit bot cache is now keyed by IP + User-Agent instead of just IP. This prevents a malicious scanner from inheriting whitelist status if it uses the same IP as a legitimate crawler.
+* 🐛 **Fixed:** Flood attack auto-permaban now reliably triggers even if the repeat offender counter fails to increment due to DB race conditions. IPs exceeding the rate limit by 5+ requests are now instantly escalated to a permanent subnet ban.
 
 ### 5.9.1.3 — Rate Limiting, Static 403 Page & Force HTTPS
 
@@ -321,6 +331,8 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 | Threat Intelligence | ❌ | ✅ |
 | Weekly Security Report | ❌ | ✅ |
 | CSP Headers | ❌ | ✅ |
+| Block SEO Crawlers (.htaccess) | ❌ | ✅ |
+| Block CLI & HTTP Clients (.htaccess) | ❌ | ✅ |
 
 **[View PRO plans & pricing](https://cyberpulse-security.com/#pricing)** — from $10/month.
 
