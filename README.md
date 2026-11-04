@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.1.4-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.6-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -23,7 +23,9 @@
 - 🕵️ **Multi-Layer Bot Detection** — 20+ independent checks, including outdated browsers (Chrome < 90, Firefox < 90) and Mac+Chrome antidetect detection
 - 🔐 **Brute Force Protection** — automatic permanent /24 subnet ban
 - 🔒 **Force HTTPS** — automatic 301 redirect with proxy-loop protection
-- ⏱️ **Smart Rate Limiting** — default 40 req/min with smart CGNAT warnings
+- ⏱️ **Smart Rate Limiting** — 100 req / 10 min absolute flood threshold; datacenter addresses limited to 30 req / 10 min
+- 🚀 **Lightweight 403 Blocks** — HEAD requests, empty User-Agents and CLI scanners get a plain 403 under 1 KB instead of the full branded block page
+- ⚡ **Faster Edge Sync** — new or lifted temporary blocks schedule a sync within 30–60 seconds instead of waiting for the 5-minute maintenance run
 - 🛡️ **Custom Static 403 Page** — beautifully styled block page for server-level blocks
 - 📊 **Real-Time Dashboard** — hourly attack histogram, security score
 - 🌍 **10 Interface Languages** — auto-detection (RU, EN, DE, FR, IT, ES, PT, ZH, JA, KO)
@@ -46,6 +48,24 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.1.6 — Faster Sync, Lightweight Blocks & Stricter Rate Limits
+
+* ⚡ **Faster sync:** New or lifted temporary blocks mark the edge list as stale and schedule a sync within 30–60 seconds instead of waiting for the five-minute maintenance run.
+* 🚀 **Lightweight blocks:** HEAD requests, empty User-Agents and command-line scanners (`curl`, `wget`, `python-requests`, `sqlmap`, `nmap`, etc.) receive a plain `403 Forbidden` under 1 KB instead of the full branded block page.
+* ⚡ **Rate limits:** The absolute flood threshold is now **100 requests / 10 minutes**, and datacenter addresses are limited to **30 / 10 minutes**. Verified search engines, whitelisted addresses, administrators and the server itself stay exempt.
+
+### 5.9.1.5 — Security Hardening & Performance
+
+* 🔒 **Security:** Fake bots can no longer slip through. A crawler name in the User-Agent is no longer a free pass — known crawlers must come from their own domains and network (ASN), and spoofed search engines are rejected.
+* 🔒 **Security:** Login page, XML-RPC, admin pages, and the REST API are now checked early. Previously the main protection layer never saw these requests.
+* 🛡️ **Data safety:** Background code can no longer wipe permanent bans. Any automatic cleanup that would remove more than 25 records is refused and written to the audit log. Only an administrator can remove bans in bulk.
+* ⚡ **Speed:** Obvious bots no longer pay for a full WordPress load — cheap checks run first.
+* ⚡ **Speed:** Rate limits, flood counters, and log deduplication moved to a fast cache layer, so a busy site stops writing to the database on every page view.
+* ⚡ **Speed:** Heavy admin files load only where they are needed, and dashboard counters are cached.
+* 🎨 **Interface:** Unban and delete actions work without reloading the page — the row disappears, scroll position is kept, and results are announced politely instead of blocking alerts. Everything still works without JavaScript.
+* 🎨 **Interface:** The Permaban tile updates instantly after an unban and shows a real breakdown of single addresses and ranges.
+* ⚡ **Rate limiting:** The effective default is **20 requests per minute**. Builds that stored the old 40 value are migrated to 20, because the duplicate check that used to halve it has been removed.
 
 ### 5.9.1.4 — Major UI Overhaul & Security Fixes
 
