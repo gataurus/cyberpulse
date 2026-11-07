@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.1.6-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.7-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -22,6 +22,7 @@
 - 🛡️ **Server-level `.htaccess` Protection** — optional (opt-in) blocking of sensitive files and AI bots directly at the Apache/LiteSpeed level
 - 🕵️ **Multi-Layer Bot Detection** — 20+ independent checks, including outdated browsers (Chrome < 90, Firefox < 90) and Mac+Chrome antidetect detection
 - 🔐 **Brute Force Protection** — automatic permanent /24 subnet ban
+- 🗄️ **Reliable Temporary Blocks** — stored in a dedicated database table (one row per block), so simultaneous blocks can never overwrite each other; mirrored to the option for rollback safety
 - 🔒 **Force HTTPS** — automatic 301 redirect with proxy-loop protection
 - ⏱️ **Smart Rate Limiting** — 100 req / 10 min absolute flood threshold; datacenter addresses limited to 30 req / 10 min
 - 🚀 **Lightweight 403 Blocks** — HEAD requests, empty User-Agents and CLI scanners get a plain 403 under 1 KB instead of the full branded block page
@@ -48,6 +49,13 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.1.7 — Reliable Temporary Blocks & Cleanup
+
+* 🗄️ **Temporary blocks now live in a dedicated database table** instead of one option row. Every block is its own row, so two simultaneous blocks can no longer overwrite each other — previously the loser's block simply disappeared. The upgrade copies the existing blocks into the table on the first admin visit; the option keeps being written as a mirror, so a rollback to an older build still finds every block, and if the table cannot be created the plugin falls back to the option and behaves exactly as before.
+* ⚡ **Temporary blocks:** the expired-block cleanup now takes the write mutex before reading the list. Previously it scanned first and locked only the write, so a block created in between was overwritten by the stale snapshot.
+* 🧹 **Cleanup:** removed eleven unused helper functions left over from earlier releases (old diagnostics, the pre-proof-of-work unblock-token generator, an unused UA-stats rebuilder). No behaviour change.
+* 🎨 **Assets:** added a new plugin icon.
 
 ### 5.9.1.6 — Faster Sync, Lightweight Blocks & Stricter Rate Limits
 
