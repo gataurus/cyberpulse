@@ -2,7 +2,7 @@
 
 **Free WordPress security plugin. Blocks AI scrapers, brute force attacks, bots, XSS, and vulnerability scanners. 10 languages, real-time dashboard.**
 
-[![Download](https://img.shields.io/badge/download-v5.9.1.7-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
+[![Download](https://img.shields.io/badge/download-v5.9.1.9-blue.svg)](https://github.com/gataurus/cyberpulse/releases/latest)
 [![WP Directory](https://img.shields.io/badge/WordPress-Directory-brightgreen.svg)](https://wordpress.org/plugins/cyberpulse)
 [![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)](LICENSE)
 [![PHP](https://img.shields.io/badge/PHP-7.4+-purple.svg)](https://php.net)
@@ -20,13 +20,16 @@
 
 - 🤖 **AI Scraping Protection** — blocks GPTBot, ClaudeBot, PerplexityBot, CCBot, Bytespider
 - 🛡️ **Server-level `.htaccess` Protection** — optional (opt-in) blocking of sensitive files and AI bots directly at the Apache/LiteSpeed level
-- 🕵️ **Multi-Layer Bot Detection** — 20+ independent checks, including outdated browsers (Chrome < 90, Firefox < 90) and Mac+Chrome antidetect detection
+- 🕵️ **Multi-Layer Bot Detection** — 20+ independent checks, including outdated browsers and Mac+Chrome antidetect detection
 - 🔐 **Brute Force Protection** — automatic permanent /24 subnet ban
 - 🗄️ **Reliable Temporary Blocks** — stored in a dedicated database table (one row per block), so simultaneous blocks can never overwrite each other; mirrored to the option for rollback safety
 - 🔒 **Force HTTPS** — automatic 301 redirect with proxy-loop protection
 - ⏱️ **Smart Rate Limiting** — 100 req / 10 min absolute flood threshold; datacenter addresses limited to 30 req / 10 min
 - 🚀 **Lightweight 403 Blocks** — HEAD requests, empty User-Agents and CLI scanners get a plain 403 under 1 KB instead of the full branded block page
 - ⚡ **Faster Edge Sync** — new or lifted temporary blocks schedule a sync within 30–60 seconds instead of waiting for the 5-minute maintenance run
+- 🗺️ **Offline Country Lookups** — bundled country table (252,603 prefixes) resolves visitor addresses locally, no third-party API call per request
+- 🌍 **Datacenter Detection** — compact table built from live BGP announcements (38,353 prefixes), so rented servers are reliably identified as hosting
+- 🎯 **Accurate Network Lookup** — "most specific prefix wins" rule, one-pass search window (0.3 ms per lookup)
 - 🛡️ **Custom Static 403 Page** — beautifully styled block page for server-level blocks
 - 📊 **Real-Time Dashboard** — hourly attack histogram, security score
 - 🌍 **10 Interface Languages** — auto-detection (RU, EN, DE, FR, IT, ES, PT, ZH, JA, KO)
@@ -49,6 +52,16 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 ---
 
 ## 📊 Changelog
+
+### 5.9.1.9 — Crawler 403 Fix, Bundled Geo/DC Tables & Network Lookup Fix
+
+* 🤖 **Fixed:** verified search engines could be blocked with 403. A crawler sends no `Accept-Language` header, and the browser check treated that as a bot signature, so a genuine Googlebot or YandexBot could be refused. A declared crawler identity is now recognised as a legitimate client. Whether the address really belongs to that crawler is still verified against its network, so a forged User-Agent gains nothing.
+* 🗺️ **Country lookups no longer need the network.** The free build used to ask a third-party API for every country it displayed. It now ships the same bundled country table the PRO build uses (252,603 prefixes), so a visitor's address is resolved locally and is only sent to a geolocation provider when it is not in the table.
+* 🌍 **Datacenter detection now covers real hosting address space.** The plugin used to rely on a hand-written list of 256 prefixes, which recognised only 0.2% of Amazon AWS, 0% of Oracle Cloud, 0% of Cloudflare and 2.7% of Microsoft Azure addresses. It now ships a compact table built from live BGP announcements (38,353 prefixes), so a rented server is identified as one.
+* 🎯 **Fixed a wrong answer in the network lookup.** BGP prefixes nest — a /21 can contain a /24 owned by a different operator. The search could return the enclosing network instead of the specific one, and could miss an enclosing network entirely when it sat far back in the table. It now applies the same "most specific prefix wins" rule a router uses, and reads the search window in one pass (9× faster: 0.3 ms per lookup).
+* 🔄 **The Chrome version floor is derived, not hardcoded.** The old fixed value (130) silently stops matching as Chrome advances, which let scrapers advertising a newer version through while flagging fewer and fewer real browsers. The floor now follows the actual release cadence and stays correct without maintenance.
+* 🛡️ **Self-healing block table.** If the temporary-block table disappears (migration, partial restore, host move), the cached "table exists" verdict now resets instead of repeating a database error on every request.
+* 🧹 **Cleaner uninstall.** Now also removes the highest-permaban marker and the seen-version flag, so a reinstall does not inherit state that hides the first alert or the upgrade notice.
 
 ### 5.9.1.7 — Reliable Temporary Blocks & Cleanup
 
@@ -109,7 +122,7 @@ Or install directly from WordPress admin: **Plugins → Add New → search "Cybe
 
 ### 5.9.1.1 — Security & Reliability Hotfix
 
-* 🔒 **Security:** User-Agent validation rewritten — hardcoded Chrome version threshold replaced with behavioural verification (Sec-Fetch-*, Client Hints, Accept-Language). 
+* 🔒 **Security:** User-Agent validation rewritten — hardcoded Chrome version threshold replaced with behavioural verification (Sec-Fetch-*, Client Hints, Accept-Language).
 * 🤖 **Bot Detection:** Added WebView whitelist (Instagram, Facebook, TikTok, Telegram, Snapchat, Pinterest, LinkedIn, WeChat, LINE, KakaoTalk, Viber, Twitter) to prevent false positives on mobile in-app browsers.
 * ⚡ **Reliability:** Temporary blocks now survive `alloptions` cache invalidation — fixes rare cases where a blocked IP was allowed again within seconds.
 
